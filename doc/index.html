@@ -24,7 +24,7 @@
 
 <body>
   <h1 align="middle">CS 184 Final Project Proposal: Volumetric Scattering Rendering</h1>
-<h2 align="middle">Team Member: Jiehan Wang</h2>
+<h2 align="middle">Team Member: Jiehan Wang, Jiayue Tao</h2>
 
 <h2 align="middle">Abstract</h2>
 <p>Our project will implement Volumetric Path Tracing. Currently, in project 3, we implement a path tracer which only
@@ -35,8 +35,15 @@ Our current path tracer assumes that lights travel in vacuum, but in real path t
 smoke and cloud, and it is important when we try to reach fidelity while doing path tracing. It is more challenging
 than the normal path tracer, because unlike explicit, media are implicit to interact with, and scattering involves many
 different lights behavior.</p>
-
+<h2>General Approach </h2>
+<p>The participating media can be modeled as a collection of particles. Light can be absorbed or scattered when it interacts with these particles. Because the particle can run randomly, we will not treat particles as a whole and consider the "aggregate probabilistic behavior". </p>
+<p>
+  To sample the radiance of a camera ray from a particular pixel, we will trace a random walk through this direction towards the nearest surface hitpoint. If the walk distance is greater than or equal to the distance to surface, we will use the radiance at that hitpoint and scale it with the extinction coeffient that correlates with the inherent property of the atmosphere. If the walk distance is smaller than the the distance to surface, we will estimate the integral of incoming scattered radiance across the entire sphere (Monte Carlo). We then use the radiance samples from the random walks in Monte Carlo estimation.
+</p>
   <h2 align="middle">Goals and Deliverable</h2>
+  <p>We expect that the most challenging part of the project is to reduce noise in the rendering and the computational cost. To reduce noise, we may implement the importance sampling method discussed in one of the articles listed below. We will measure the quality of our system mainly be observing visual correctness and noice levels.</p>
+
+
   <h3>Plan to deliver: </h3>
   <p> We will create some rendered images for volumetric scattering, with many different behaviors of light when it
   travels through media. For example, absorbance (particles absorbs radiance), out-scattering (particles scatter lights
@@ -44,12 +51,23 @@ different lights behavior.</p>
   both isotropic (particle scatters lights uniformly) and anisotropic scattering.</p>
 <ul>
   <li>Homogeneous media scene with point light source.</li>
-  <li>Homogeneous media scene with normal light source.</li>
+  <li>Homogeneous media scene with normal light source. (first column of left image)</li>
   <li>Homogeneous media scene with different media (eg. fog, smoke).</li>
 </ul>
+  
+  <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/dragon.jpg" width="480px" />
+                    <figcaption align="middle">Foggy room with dragon, rendered with different volumetric scattering implementations</figcaption>
+                </tr>
+            </table>
+        </div>
   <h3>Hope to deliver: </h3>
   <ul>
-    <li>Bi-direction path tracing for volumetric scattering.</li>
+    <li>Bi-direction path tracing for volumetric scattering. (first column of right image)</li>
+    <li>Importance sampling for path tracing (second colum of left image)</li>
     <li>Non-homogeneous media.</li>
     <li>Spectral Ray Tracing for media like water droplets in the air (rainbow!)</li>
   </ul>
@@ -64,6 +82,21 @@ different lights behavior.</p>
   <li>3. Third week, implement global illumination, in-scattering and anisotropic scattering.</li>
   <li>3. Fourth week, experiment with parameters of different media, exploring more advanced volumetric lighting rendering,
   such as bi-direction path tracer, non-homogeneous scattering.</li>
+</ul>
+
+<h2 align="middle">Resources</h2>
+<ul>
+  <li>
+    <a href="https://cs.dartmouth.edu/wjarosz/publications/georgiev13joint.pdf">Joint Importance Sampling of Low-Order Volumetric Scattering</a>
+    
+  </li>
+
+  <li>
+    <a href="http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf">Rendering Participating Media
+with Bidirectional Path Tracing</a>
+  </li>
+  <li><a href="https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf">Light Transport in Participating Media</a></li>
+
 </ul>
 
 </body>
