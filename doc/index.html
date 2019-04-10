@@ -24,7 +24,43 @@
 
 <body>
   <h1 align="middle">CS 184 Final Project Proposal: Volumetric Scattering Rendering</h1>
-<h1 align="middle">Team Member:</h1>
-<h2 align="middle">Jiehan Wang, CS184-aee</h2>
+<h2 align="middle">Team Member: Jiehan Wang</h2>
+
+<h2 align="middle">Abstract</h2>
+<p>Our project will implement Volumetric Path Tracing. Currently, in project 3, we implement a path tracer which only
+support lights falling on explicit surface. However, in the real world, lights don't only interact with explicit surface.
+Our current path tracer assumes that lights travel in vacuum, but in real path tracer scene, light actually travels through
+  certain media, such as air. Lights will interact with many particles in the media, resulting in some kind of scattering
+  effect. Volumetric rendering enables us to simulate some real world effects when lights interact with media, such as fog,
+smoke and cloud, and it is important when we try to reach fidelity while doing path tracing. It is more challenging
+than the normal path tracer, because unlike explicit, media are implicit to interact with, and scattering involves many
+different lights behavior.</p>
+
+  <h2 align="middle">Goals and Deliverable</h2>
+  <h3>Plan to deliver: </h3>
+<ul>
+  <li>Homogeneous media scene with point light source.</li>
+  <li>Homogeneous media scene with normal light source.</li>
+  <li>Homogeneous media scene with different media (eg. fog, smoke).</li>
+</ul>
+  <h3>Hope to deliver: </h3>
+  <ul>
+    <li>Bi-direction path tracing for volumetric scattering.</li>
+    <li>Non-homogeneous media.</li>
+    <li>Spectral Ray Tracing for media like water droplets in the air (rainbow!)</li>
+  </ul>
+
+<h2 align="middle">Schedule</h2>
+<ul>
+  <li>1. First week, modify the existing daes file or finding new dae files to support volumetric lighting for rendering.
+  Getting familiar with project 3's path tracer's structure.</li>
+  <li>2. Second week, implementing direct point lighting for isotropic absorbance and out-scattering when light travels
+    through the media.
+  </li>
+  <li>3. Third week, implement global illumination, in-scattering and anisotropic scattering.</li>
+  <li>3. Forth week, experiment with parameters of different media, exploring more advanced volumetric lighting rendering,
+  such as bi-direction path tracer, non-homogeneous scattering.</li>
+</ul>
+
 </body>
 </html>
