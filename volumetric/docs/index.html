@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<style>
+	body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+    div.padded {  
+      padding-top: 0px;  
+      padding-right: 100px;  
+      padding-bottom: 0.25in;  
+      padding-left: 100px;  
+    }  
+  </style> 
+<title>Jiayue Tao  |  CS 184</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+<br />
+<h1 align="middle">Assignment 3: PathTracer</h1>
+    <h2 align="middle">Jiayue Tao</h2>
+
+    <div class="padded">
+    	<p>In this project, I implemented the main steps of a ray-tracing renderer, starting from generating rays from the pixel to the mesh, evaluating intersection locations, and implementing direct & global illumination ray-tracing. The accelerated BVH structure is implemented to more efficiently test intersections, and lighting is rendered based on physical principles of light rays bounding between surfaces. The final products of this renderer can show realistic renderings of diffused surfaces under different lighting.</p>
+        
+
+    <h2 align="middle">Part 1: Ray Generation and Intersection</h2>
+        <p></p>
+
+        <p>
+        	For ray generation, I completed raytrace_pixel() to take the specificed amount of samples for each pixel, casting such number of rays toward the mesh model. This function calls the camera->generate_ray function to actually convert the coordinates of the sensor sample coordinate into positions in the camera space, which involves a change of bounding ranges and conversion to 3D. Then, the ray's parameters such as max_t are initialized. </p><p>
+        	For the intersection of triangles, I implemented the intersect(const Ray& r, Intersection *isect) and intersect(const Ray& r). The difference between them is that the first one also give information aout the interseciton such as hitpoint location and t value. I implemented the Moller Trumbore algorithm method to calculate the t value of their intersection as well as the b1 and b2 value as barycentric coordinates to locate the hit point. The condition for a valid intersection within this triangle is as follows: the intersection is not valid if the t value exceeds the max_t of the ray or is smaller than its min_t; if any of the barycentric coefficients are not between 0 and 1. If the intersection is valid, the t value is passed into the intersection reference, and b1, b2, (1-b1-b2) are barycentric coordinates that help us compute the actual coordinate of the hit. The primitive of this intersection is set to be "this" triangle and the bsdf is the bsdf of this triangle as well, received from the get_bsdf() function. It is also necessary to update the max_t of the ray to this t value so that we do not treat anything farther away as valid intersections of this ray.
+        	
+        </p>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/lambert.png" width="480px" />
+                    <figcaption align="middle">Two Spheres in a Room</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/teapot.png" width="480px" />
+                    <figcaption align="middle">Shaded Teapot</figcaption>
+                </tr>
+            </table>
+        </div>
+        
+    <h2 align="middle">Part 2: Bounding Volume Hierarchy</h2>
+    	<p></p>
+    	<p>
+    		The BVH construction that I implemented first iterates through the primitives and computes their bounding boxes. Then, I initialize a new BVH node which can be filled in two ways. The first case is that the number of primitives passed in is already less than the given threshold, so I can simply pass them into the bvh node and return. In the other case, the centroid of the centroid box is found and designated as the splitting point. The splitting axis is found by computing the dimension with the largest extent. Then, the primitives are split into left and right by the splitting point's axis and each is passed into a recursive call of bvh construction until it reduces to less than the threshold. The prims of this non-lead node is set to null. When encountering the special case where primitives share the same centroid leading to one child of the tree to be empty, I just pick randomly half of the primitives to the empty side. This works well in most cases, but sometimes may result in a dip in efficiency in the case where the bounding box does not get smaller, but just the elements in the children get more scattered. </p><p>
+
+    		For my BVH intersection algorithm, I first implemented the intersect function in BBox. In this function, I compute the t values of the ray entering and exiting the boundary box in each dimension, and then take the intersection of these three ranges to get the tightest t interval where the ray in within the bounding box. Then, I mark the intersection as false if the start value of the interval is greater than the end value of the interval, or if the t inverval has no intersection at all within the range of [max_t, min_t] of the ray. Otherwise, the intersection is true. </p><p>
+
+    		Then, in my BVH intersect function, there are three cases. First, if the node's bounding box does not intersect the ray at all, as returned by the BBox intersect function, then return false. Second, if the node is a leaf-node with non-empty primitives, then we check we check the ray's intersection with every primitive of the node, and the intersection function implemented in part 1 helps populate the intersection data. If the node is not a lead-node, then we call BVH intersect recursively on its left and right children - if either returns true, then return true, and the intersection should have been properly populated in the recursive call. </p>
+    		<p>
+    			Speed experiments before and after the acceleration BVH structure: </p><p>
+    			Rendering keenan/banana.dae takes 64.177s before the acceleration structure, with default settings, no extra samples or light rays. </p><p>
+    			Rendering the banana mesh takes 0.4568s after implementing BVH, with the same settings. </p><p>
+    			Rendering meshedit/peter.dae takes ~150s without BVH and 0.8s after BVH. </p><p>
+    			Implementing BVH effectively reduces the amount of work done to test intersections of the ray. Without this achitecture of bounding volume hierarchy, the ray needs to test if there is an intersection with every primitive in the mesh. With the BVH, we traverse down the hierarchical tree and only test intersection with at most max_element number of primitives. This greatly reduces workload and makes rendering much faster. 
+=    		
+    	</p>
+
+    	<br>
+    	<div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/wall-e.png" width="480px" />
+                    <figcaption align="middle">rendered wall-e</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/peter.png" width="480px" />
+                    <figcaption align="middle">rendered peter</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/lucy.png" width="480px" />
+                    <figcaption align="middle">rendered lucy in cornell room</figcaption>
+                </tr>
+            </table>
+        </div>
+
+
+    <br>
+    <h2 align="middle">Part 3: Direct Illumination</h2>
+    	<p></p>
+    	<p>
+    		For uniform hemisphere direct illumination estimation, which is in estimate_direct_lighting_hemisphere, each incoming angle sample is taken from the hemisphereSampler, which returns the incoming angle in the object coordinate system. Then, we generate a new test ray with that incoming angle (in world coordinate) as direction and (approximately) the hitpoint as origin and shoot the ray to see if it intersects with anything. If it does, we capture the radiance of that surface and multiply by the bsdf function of the original hitpoint and the normal, then divide by the pdf. In uniform sample, pdf is simply the constant (1/2*pi). We accumulate the irradiance calculated with the above estimator and then divide by the number of samples taken to get the final irradiance at the hitpoint. </p>
+    		<br><p>
+    		For importance sampling, we iterate through the light sources. For each light source, if it is a point light, then we only take one sample, since all samples will be the same. If not, we take the specified number of samples. To take each sample, we sample from the light source and get an arbitrary incoming angle towards the hitpoint as well as the distance to the light source, and the sample's pdf. Using the incoming angle, we shoot a ray from the hitpoint (approximately, offset by a small margin) and see if it intersects with any object in the scene. If it does, then it means the light will be blocked by that surface, so irradiance from that sample will simply be 0. If it does not, then we estimate the irradiance by multiplying the radiance of the light source on hand, the bsdf at the hitpoint, a normal, and divide by the pdf. We accumulate the result and divide by number of samples in the end.</p><br><p>
+    		An important thing to note here is that we need to set the new ray's max_t to be the distance to the light because we only want to know whether there will be anything blocking the light between the light and the hitpoint.
+    	</p>
+
+    	<div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/dragon_t8s1l1.png" width="480px" />
+                    <figcaption align="middle">Dragon rendered with 1 light ray, 1 sample per pixel</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/dragon_t8s1l4.png" width="480px" />
+                    <figcaption align="middle">Dragon rendered with 4 light rays, 1 sample per pixel</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/dragon_t8s1l8.png" width="480px" />
+                    <figcaption align="middle">Dragon rendered with 8 light rays, 1 sample per pixel</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/dragon_t8s1l16.png" width="480px" />
+                    <figcaption align="middle">Dragon rendered with 16 light rays, 1 sample per pixel</figcaption>
+                </tr>
+            </table>
+        </div>
+
+
+
+    	<p>
+    		Comparing the above four images, we clearly see that noise decreases in soft shadows with more light rays when using important sample for direct illumination. With more light rays, the shadow outline becomes more defined, and the color becomes softer, reducing the number of black specks. The effect improves with an increase of light rays because the Monte Carlo estimation get more accurate when the number of samples taken increases. Overall, however, the images rendered are noisy because the number of samples taken per pixel is very low.
+    	</p>
+
+    	<br>
+
+    	<div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny-unif.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell room (uniform hemisphere sampling) (16 samples/pixel, 8 light rays)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny-import.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell room (importance sampling) (16 samples/pixel, 8 light rays)</figcaption>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/unif-s16-l8-m6.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell room (uniform hemisphere sampling) (16 samples/pixel, 8 light rays)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/import-s16-l8-m6.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell room (importance sampling) (16 samples/pixel, 8 light rays)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <p>
+        	Importance sampling has much better effects and fewer sharp black specks, while uniform sampling seems to have a uniformly distribution of small dark spots all over the image. Because uniform hemisphere sampling takes sample uniformly around the hitpoint, it has a higher possibility of hitting a diffused surface, which results in a (0, 0, 0) radiance and thus a dark spot on the image. In contrast, light importance sampling only tests rays pointing towards the area of the light source, so it either casts a ray that is ultimately blocked by a surface, or it actually hits on the light which gives a radiance. Another remarkable difference is that light importance sampling cannot show the light source, so the ceiling is all black. Because when iterating through each light source, we cast a ray towards the light source, then if the pixel ray (eye ray) has a hitpoint at the light source already, then it will not "bounce" from itself again. Therefore, the light source disappears. Meanwhile, because uniform sampling casts rays randomly around, it's possible, although not often, that the bounced ray still lands of another part of the area light, so some part of the light source will be rendered. 
+        </p>
+
+
+
+
+    <br>
+    <h2 align="middle">Part 4: Global Illumination</h2>
+    	<p></p>
+    	<p>
+    		To implement indirect illumination, I completed the recursive function PathTracer::at_least_one_bounce_radiance(const Ray&r, const Intersection& isect). In this function, first, the direct illumination on a particular intersection hit point is calculated by calling one_bounce_radiance(r, isect), which basically does the light importance lighting in Part 3. Then, if the ray inputted of the function has a depth that is greater than 1, then there are two cases. Either the ray is at max_depth, in which case we definitely have to find its indirect illumination by a recursive call, or it has already had at least one bounce of indirect illumination but still not reached max_depth, then we use the Russian Roulette to determine whether to continue bouncing off the light (recursion) or terminate the path. If we determine to continue bouncing, we call at_least_one_bounce_radiance again, but this time with a new ray starting at the hit_point as the parameter. We generate this new ray by the w_in found previously with bsdf and the origin at (approximately) the hit point, also setting its depth to be one smaller than r. Then, we see if it intersects with anything, if so, populate a new intersection, and then pass this new intersection into the recursive call as well. The final irradiance at the original hitpoint given by isect is estimated with the radiance given by the recursive call multiplied by the bsdf at isect, the normal, and divided by the pdf and the continuing probability of the Russian Roulette. 
+    	</p>
+
+    	<div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/cbbunny-s1024-l16-m5.png" width="480px" />
+                    <figcaption align="middle">Bunny in a Cornell Room (1024 samples/pixel, 16 light rays, max_depth = 5)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/dragon-s1024-l16-m5.png" width="480px" />
+                    <figcaption align="middle">Dragon with Global Illumination (1024 samples/pixel, 16 light rays, max_depth = 5)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/lambertian-1024.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with Global Illumination (1024 samples/pixel, 16 light rays, max_depth = 5)</figcaption>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <p align="middle">Comparison of direct and indirect illumination</p>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres_direct.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room only with direct illumination (1024 samples/pixel, 16 light rays, max_depth = 5)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres_in.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room only with indirect illumination (1024 samples/pixel, 16 light rays, max_depth = 5)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <p>
+        	Comparing the two images, one illuminated only with direct illumination, and the other only with indirect illumination, we observe some remarkable phenomena. First of all, it is reasonable that the light source does not show up in either because the light source only appears when there is zero-bounce radiance, and my understanding for direct illumination is that the surface is directly illuminated by the light source. In the direct illumination, everything that can intersect directly with the rays from the area light shows up, but there is no color bleeding or soft shadow because wherever the ray does not touch directly, things are pitch dark. In contrast, in indirect illuminatin, we see the reddish and bluish hues on the spheres, and everywhere including the ceiling and the position of shadows are dimly illuminated. This means that when direct and indirect illumination are combined, the resulting shadow will be less dark and softer. The colored hues will also show up in global illumination.
+        </p>
+
+
+        <p align="middle">Comparison of Renderings of different ray depths</p>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny0.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell Room with ray's max_depth = 0)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny1.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell Room with ray's max_depth = 1)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny2.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell Room with ray's max_depth = 2)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny3.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell Room with ray's max_depth = 3)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/bunny100.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell Room with ray's max_depth = 100)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <p>
+        	When the tracing ray's maximum depth is zero, it means that only the emissive light source will show up on the rendering since it does not require any bounce to be able to shoot into the image plane. When the racing ray's maximum depth is 1, we simply have direct illumination plus the self-emission of the light source. Direct illumination only computes the lighting on an intersection from the light directly because otherwise the incoming ray would be considered to have no radiance. When the tracing ray's maximum depth is 2, we start to have some indirect illumination such as light of the ceiling, overal lighting of the bunny even at places where no direct light is shining upon, and slight color bleeding on the bunny, signaling the rays that come from the light source, bounced on the colored walls, and then bounced onto the bunny. When the maximum depth increases, the marginal differences become smaller because the surfaces are all diffuse, so the increasing number of bounces don't create much more effects. 
+        </p>
+
+
+        <p align="middle">Comparison of Renderings with different samples per pixel</p>
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres1.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 1 sample per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres2.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 2 samples per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres4.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 4 samples per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres8.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 8 samples per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres16.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 16 samples per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres64.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 64 samples per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <p align="middle">Comparison of Renderings with different samples per pixel</p>
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/spheres1024.png" width="480px" />
+                    <figcaption align="middle">Spheres in Cornell Room with 1024 samples per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+    <br>
+    <h2 align="middle">Part 5: Adaptive Sampling</h2>
+    	<p></p>
+    	<p>
+    		Adaptive sampling is implemented in the loop of gathering samples per pixel (ray generation) in raytrace_pixel. Every time a sample is taken, we accumulate its illuminance value in a variable s1 and the sume of the sqaure of this value in s2. When the samples taken have filled another batch (take the modulo of the samples taken and the batch size), then we calculate the I value by using the following formula.
+    	</p>
+    	<p align="middle"><pre align="middle">I = 1.96 * sqrt(variance) / sqrt(sample size)</pre></p>
+    	<p>
+    		Variance can be calculated from the s1 and s2 values. Then if I <= maxTolerance⋅μ, then we deem this sample average to be converged and stop sampling anymore at this pixel. We break out of the loop and return the average spectrum so far.
+    	</p>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/adbunny.png" width="480px" />
+                    <figcaption align="middle">Bunny in Cornell Room with adaptive sampling (2048 rays per pixel)</figcaption>
+                </tr>
+            </table>
+        </div>
+
+        <div align="center">
+            <table style="width=100%">
+                <tr>
+                    <td align="middle">
+                    <img src="images/adbunny_rate.png" width="480px" />
+                    <figcaption align="middle">Sampling rates of the above bunny</figcaption>
+                </tr>
+            </table>
+        </div>
+
+
+    <br>
+
+
+    
+</div>
+</body>
+</html>
+
+
+
+

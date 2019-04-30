@@ -1,0 +1,1424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5FD7878318E245D09059641C /* uninstall */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C78133C243A6487FBB509F4A /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildPhases = (
+				1E05A33AE9014960B8FFAE9B /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = uninstall;
+			productName = uninstall;
+		};
+		8C28213D39644DBDB7E9A0E0 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6E38040181B84F1B90EC9066 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				C99CB71AB77A4F77A57AF761 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		99C4CE9D36094C26B83922F7 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 10CEA5E6BA6449E2917365F5 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				D5BCF224FBFB438AB4AAD857 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				BDD5337AC37D4957BADFC7E8 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		9E0D962B09A2442EA1805B1D /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AA56CDBA899942C7B73D8FC6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				8E22334132D148B78040B4DD /* CMake Rules */,
+			);
+			dependencies = (
+				2BB3EC7AD6A947F0AC1084DF /* PBXTargetDependency */,
+				F9A42672025A4E328B1FA8C0 /* PBXTargetDependency */,
+				5243D0BDDBF448E099BFA374 /* PBXTargetDependency */,
+				FD8F7A656ED54DC3998D095C /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		011161670676446093407F5C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = E69F84BB93C049D1BED4C042 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/monitor.c */; };
+		02D8AE4664C34822AA30E73A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/path.cpp */ = {isa = PBXBuildFile; fileRef = 6A43B9AE71ED45D6BA0ADDA1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/path.cpp */; };
+		25AA5AF22EA748809F44C3A2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/lodepng.cpp */ = {isa = PBXBuildFile; fileRef = 84AB3DB9B94C4F3C87574A9E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/lodepng.cpp */; };
+		264DA0F4F3A14F9BBA8C8E84 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 3F39B9F319AF4B33BB858213 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_monitor.m */; };
+		26AA8227EDBD4A94A2F3DAE6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 1890820AD54240269E56061D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_window.m */; };
+		2D59AF3C5BD14F00AF378CE4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector2D.cpp */ = {isa = PBXBuildFile; fileRef = 12D8B600539448FDACFF2631 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector2D.cpp */; };
+		30805C0CB9EF4350A0519636 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = A0E75F1A205747AC8C8093B4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/window.c */; };
+		31A0F927C522441084D708AB /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/spectrum.cpp */ = {isa = PBXBuildFile; fileRef = 9442752BE87F4AC3B3B78E9D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/spectrum.cpp */; };
+		35BC0EA1F4744F3FACD57E8D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 8342B537A99A4770811EA30B /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/context.c */; };
+		45F409F64A77410186EFFE81 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/color.cpp */ = {isa = PBXBuildFile; fileRef = 516F2A30C1C345D087170B13 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/color.cpp */; };
+		504E76282EA64F779309AFE0 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.m */ = {isa = PBXBuildFile; fileRef = 79DAA5EC9F494141848B1CC8 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.m */; };
+		536FDC837F5C4B4F9DB0D82C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix4x4.cpp */ = {isa = PBXBuildFile; fileRef = D4BA6F131C0B45A9810C1FA3 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix4x4.cpp */; };
+		56F1975ABD50445191DCBA13 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 27E12026A79E45B484EF761C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.m */; };
+		59C0419F72E44B7BA77D4E60 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.h */ = {isa = PBXBuildFile; fileRef = EC4F1F9AADB54DBFB748BB47 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.h */; };
+		6A183A3AA4BD48228A7EEFC6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 4D1C929B3EB347C0BE7CFC4B /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/internal.h */; };
+		6B0B06FECF254072AF9434F1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/tinyxml2.cpp */ = {isa = PBXBuildFile; fileRef = CA71B3E0F2354A4AB1F22357 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/tinyxml2.cpp */; };
+		6CE19340E3954A2490F6BEB0 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/base64.cpp */ = {isa = PBXBuildFile; fileRef = 91860D2D8B1A4616963459D7 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/base64.cpp */; };
+		6F343DD5166A48C58349FF5A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 35CF6D89818F4ADB97BB455D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_init.m */; };
+		72C0B1551696404483BDB29A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdtext.cpp */ = {isa = PBXBuildFile; fileRef = DDB533E2449E49518C8996AE /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdtext.cpp */; };
+		733FB30902D1434DB7659412 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/complex.cpp */ = {isa = PBXBuildFile; fileRef = 7070716636B64393BCC6D97E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/complex.cpp */; };
+		7785F03EE4C54AC8B364BA67 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector4D.cpp */ = {isa = PBXBuildFile; fileRef = A511E9F8F0724EF5AD425B3A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector4D.cpp */; };
+		7A1AB755DEF843589218F938 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = AE580C10A4B148FF8622DD24 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.h */; };
+		7D999A7FB91C4DE5A4BF53D4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glew.c */ = {isa = PBXBuildFile; fileRef = 8D9C1F77743D4E479FED65A2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glew.c */; };
+		802C62348C564FEBB4E47622 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = C0D323F44E08407C82C8EAE2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3native.h */; };
+		82A0AF14F780481F8B17CE94 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 8712E4940AED48D3B16A55F9 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/CMakeLists.txt */; };
+		8448626D72DA48F9A40C1A27 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.c */ = {isa = PBXBuildFile; fileRef = 2725C861726F4ECCBCEE72EE /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.c */; };
+		95BAB75536ED4C149EF8447D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/mach_time.c */ = {isa = PBXBuildFile; fileRef = 8F0F01221E314E619B19F468 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/mach_time.c */; };
+		9B438386E7FF400B977A2B49 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.h */ = {isa = PBXBuildFile; fileRef = 88142B427BCD4B9BBBD5856E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.h */; };
+		AE420D13AD56428C9E86D786 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = EE36F5828B3244F3A14DE265 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src/glfw_config.h */; };
+		B4C77EC9F2ED4ACCB516A1AA /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector3D.cpp */ = {isa = PBXBuildFile; fileRef = 3D66495207134DB7A838339A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector3D.cpp */; };
+		C1A70A5306514A19A79F9FA6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 32E14E09568647EEA49C2204 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/CMakeLists.txt */; };
+		C39624BE3099461DA399ABB3 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXBuildFile; fileRef = 36DB7807238F45439DE9AE40 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glewinfo.c */; };
+		C5BA0EF6A2C946AF99DCBC06 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/viewer.cpp */ = {isa = PBXBuildFile; fileRef = 3C40F628194741D5B4D697B2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/viewer.cpp */; };
+		C89BFAC370C940D78306BEA7 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 2685EB00BDDD4876BFA63153 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3.h */; };
+		C9A881EF150A4A909F684354 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXBuildFile; fileRef = 98658545C3374873BB954F0C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/visualinfo.c */; };
+		CA6DCFDCFFC844E7A117C802 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 0FC59A7A0240425CA46A935F /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/input.c */; };
+		D18818A039984953BFB10AE1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix3x3.cpp */ = {isa = PBXBuildFile; fileRef = 206F6F8E88F54CAD82032E20 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix3x3.cpp */; };
+		D35FE7AF3BF84D00A0CEFA1C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 771258441ED04336BB67DB3C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/CMakeLists.txt */; };
+		D3C0E7A5F5EF469E9E33E53E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdfont.cpp */ = {isa = PBXBuildFile; fileRef = 0A0F316439AE422A9109F67F /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdfont.cpp */; };
+		DA762652DC31468982946D73 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 083880552D4B4863940901E5 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_platform.h */; };
+		E2C31DBAC70F4ADEB514C6F4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/quaternion.cpp */ = {isa = PBXBuildFile; fileRef = 5714FE473C2340618133ADF6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/quaternion.cpp */; };
+		FEA865A49FE247B0BC338F94 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 79E74E088C9F4BEDB72117E2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/init.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		150F4228565A486D81337800 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		29A983EB2DB341DF9174121C /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		7ED83A047B20431AB48B54D8 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		BBA19667F18E4DCBA9016C95 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		2D5786E70EC645DEB4305F98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8EEA1DDD19664ACEA4332DA3;
+			remoteInfo = glfw;
+		};
+		414B314F752B49A88B7EF233 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68CE3F23029943439B2F48FF;
+			remoteInfo = glew;
+		};
+		5C4FF2CA4CA44B969615F03B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C28213D39644DBDB7E9A0E0;
+			remoteInfo = ZERO_CHECK;
+		};
+		8659FB27A2F345FCB85C1115 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68CE3F23029943439B2F48FF;
+			remoteInfo = glew;
+		};
+		D9CDBF24640D457D8F92DC6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1412A6403CC14EBE890DA42C;
+			remoteInfo = CGL;
+		};
+		DF44945AC41148E7B58BB240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E0D962B09A2442EA1805B1D;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		083880552D4B4863940901E5 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = deps/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		0A0F316439AE422A9109F67F /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdfont.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdfont.cpp; path = src/osdfont.cpp; sourceTree = SOURCE_ROOT; };
+		0FC59A7A0240425CA46A935F /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = deps/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		12D8B600539448FDACFF2631 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector2D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector2D.cpp; path = src/vector2D.cpp; sourceTree = SOURCE_ROOT; };
+		1890820AD54240269E56061D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = deps/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		206F6F8E88F54CAD82032E20 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix3x3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix3x3.cpp; path = src/matrix3x3.cpp; sourceTree = SOURCE_ROOT; };
+		2685EB00BDDD4876BFA63153 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = deps/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		2725C861726F4ECCBCEE72EE /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_tls.c; path = deps/glfw/src/posix_tls.c; sourceTree = SOURCE_ROOT; };
+		27E12026A79E45B484EF761C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = deps/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		32E14E09568647EEA49C2204 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3561C654EAC9412DB564A4B8 /* CGL */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libCGL_osx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		35CF6D89818F4ADB97BB455D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = deps/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		36DB7807238F45439DE9AE40 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glewinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glewinfo.c; path = deps/glew/src/glewinfo.c; sourceTree = SOURCE_ROOT; };
+		3ADBA12A45704BE9B119276E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3C40F628194741D5B4D697B2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/viewer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = viewer.cpp; path = src/viewer.cpp; sourceTree = SOURCE_ROOT; };
+		3D66495207134DB7A838339A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector3D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector3D.cpp; path = src/vector3D.cpp; sourceTree = SOURCE_ROOT; };
+		3F39B9F319AF4B33BB858213 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = deps/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		4D1C929B3EB347C0BE7CFC4B /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = deps/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		516F2A30C1C345D087170B13 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/color.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = color.cpp; path = src/color.cpp; sourceTree = SOURCE_ROOT; };
+		5714FE473C2340618133ADF6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/quaternion.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = quaternion.cpp; path = src/quaternion.cpp; sourceTree = SOURCE_ROOT; };
+		6A43B9AE71ED45D6BA0ADDA1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/path.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = path.cpp; path = src/path.cpp; sourceTree = SOURCE_ROOT; };
+		7070716636B64393BCC6D97E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/complex.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = complex.cpp; path = src/complex.cpp; sourceTree = SOURCE_ROOT; };
+		771258441ED04336BB67DB3C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		79DAA5EC9F494141848B1CC8 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = iokit_joystick.m; path = deps/glfw/src/iokit_joystick.m; sourceTree = SOURCE_ROOT; };
+		79E74E088C9F4BEDB72117E2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = deps/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		7C91805808444EE39CE3960E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		8342B537A99A4770811EA30B /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = deps/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		84AB3DB9B94C4F3C87574A9E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/lodepng.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lodepng.cpp; path = src/lodepng.cpp; sourceTree = SOURCE_ROOT; };
+		8712E4940AED48D3B16A55F9 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = deps/glew/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		88142B427BCD4B9BBBD5856E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_tls.h; path = deps/glfw/src/posix_tls.h; sourceTree = SOURCE_ROOT; };
+		8D9C1F77743D4E479FED65A2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glew.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glew.c; path = deps/glew/src/glew.c; sourceTree = SOURCE_ROOT; };
+		8F0F01221E314E619B19F468 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/mach_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = mach_time.c; path = deps/glfw/src/mach_time.c; sourceTree = SOURCE_ROOT; };
+		91860D2D8B1A4616963459D7 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/base64.cpp; sourceTree = SOURCE_ROOT; };
+		9442752BE87F4AC3B3B78E9D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/spectrum.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = spectrum.cpp; path = src/spectrum.cpp; sourceTree = SOURCE_ROOT; };
+		98658545C3374873BB954F0C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/visualinfo.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = visualinfo.c; path = deps/glew/src/visualinfo.c; sourceTree = SOURCE_ROOT; };
+		A0E75F1A205747AC8C8093B4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = deps/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		A511E9F8F0724EF5AD425B3A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector4D.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = vector4D.cpp; path = src/vector4D.cpp; sourceTree = SOURCE_ROOT; };
+		AE580C10A4B148FF8622DD24 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = deps/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		B19B55F0935D49419272B9F4 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D323F44E08407C82C8EAE2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = deps/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		CA71B3E0F2354A4AB1F22357 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/tinyxml2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = tinyxml2.cpp; path = src/tinyxml2.cpp; sourceTree = SOURCE_ROOT; };
+		D00112E5BB694CBBBE28D09F /* glew */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglew.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4BA6F131C0B45A9810C1FA3 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix4x4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = matrix4x4.cpp; path = src/matrix4x4.cpp; sourceTree = SOURCE_ROOT; };
+		DDB533E2449E49518C8996AE /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdtext.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = osdtext.cpp; path = src/osdtext.cpp; sourceTree = SOURCE_ROOT; };
+		E69F84BB93C049D1BED4C042 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = deps/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		EC4F1F9AADB54DBFB748BB47 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iokit_joystick.h; path = deps/glfw/src/iokit_joystick.h; sourceTree = SOURCE_ROOT; };
+		EE36F5828B3244F3A14DE265 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../build/CGL/deps/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		01DB869D040646C6A26B9094 /* uninstall */ = {
+			isa = PBXGroup;
+			children = (
+				57A3A961E25B4A4C8CC95CC9 /* CMake Rules */,
+				3ADBA12A45704BE9B119276E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/CMakeLists.txt */,
+			);
+			name = uninstall;
+			sourceTree = "<group>";
+		};
+		1BA0301351CD4964AE123793 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				48074C033E4C44F595E9272D /* Source Files */,
+				717EC2A6E26D458D8E2ABBC6 /* Header Files */,
+				32E14E09568647EEA49C2204 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		39B95CF467B9449599FC1374 /* glew */ = {
+			isa = PBXGroup;
+			children = (
+				CC5745E7A5BF4A3FACE164F6 /* Source Files */,
+				8712E4940AED48D3B16A55F9 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/CMakeLists.txt */,
+			);
+			name = glew;
+			sourceTree = "<group>";
+		};
+		464985F755FC41069A7A14C3 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		469C147647FF434CBF36EE7E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				91860D2D8B1A4616963459D7 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/base64.cpp */,
+				516F2A30C1C345D087170B13 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/color.cpp */,
+				7070716636B64393BCC6D97E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/complex.cpp */,
+				84AB3DB9B94C4F3C87574A9E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/lodepng.cpp */,
+				206F6F8E88F54CAD82032E20 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix3x3.cpp */,
+				D4BA6F131C0B45A9810C1FA3 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix4x4.cpp */,
+				0A0F316439AE422A9109F67F /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdfont.cpp */,
+				DDB533E2449E49518C8996AE /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdtext.cpp */,
+				6A43B9AE71ED45D6BA0ADDA1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/path.cpp */,
+				5714FE473C2340618133ADF6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/quaternion.cpp */,
+				9442752BE87F4AC3B3B78E9D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/spectrum.cpp */,
+				CA71B3E0F2354A4AB1F22357 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/tinyxml2.cpp */,
+				12D8B600539448FDACFF2631 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector2D.cpp */,
+				3D66495207134DB7A838339A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector3D.cpp */,
+				A511E9F8F0724EF5AD425B3A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector4D.cpp */,
+				3C40F628194741D5B4D697B2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/viewer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		48074C033E4C44F595E9272D /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				35CF6D89818F4ADB97BB455D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_init.m */,
+				3F39B9F319AF4B33BB858213 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_monitor.m */,
+				1890820AD54240269E56061D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_window.m */,
+				8342B537A99A4770811EA30B /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/context.c */,
+				79E74E088C9F4BEDB72117E2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/init.c */,
+				0FC59A7A0240425CA46A935F /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/input.c */,
+				79DAA5EC9F494141848B1CC8 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.m */,
+				8F0F01221E314E619B19F468 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/mach_time.c */,
+				E69F84BB93C049D1BED4C042 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/monitor.c */,
+				27E12026A79E45B484EF761C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.m */,
+				2725C861726F4ECCBCEE72EE /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.c */,
+				A0E75F1A205747AC8C8093B4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		57A3A961E25B4A4C8CC95CC9 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		68F3E79788314FB68CCAD8F5 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				464985F755FC41069A7A14C3 /* CMake Rules */,
+				7C91805808444EE39CE3960E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		717EC2A6E26D458D8E2ABBC6 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				2685EB00BDDD4876BFA63153 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3.h */,
+				C0D323F44E08407C82C8EAE2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/include/GLFW/glfw3native.h */,
+				083880552D4B4863940901E5 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_platform.h */,
+				4D1C929B3EB347C0BE7CFC4B /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/internal.h */,
+				EC4F1F9AADB54DBFB748BB47 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.h */,
+				AE580C10A4B148FF8622DD24 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.h */,
+				88142B427BCD4B9BBBD5856E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.h */,
+				EE36F5828B3244F3A14DE265 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src/glfw_config.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		84A368A5658C475B92A6CCD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3561C654EAC9412DB564A4B8 /* CGL */,
+				D00112E5BB694CBBBE28D09F /* glew */,
+				B19B55F0935D49419272B9F4 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8508F057C3324DA9BB9AC420 /* CGL */ = {
+			isa = PBXGroup;
+			children = (
+				469C147647FF434CBF36EE7E /* Source Files */,
+				771258441ED04336BB67DB3C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/CMakeLists.txt */,
+			);
+			name = CGL;
+			sourceTree = "<group>";
+		};
+		916270F46CB3433080A029F5 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				1BA0301351CD4964AE123793 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		C96FA5F5AB7644D9B0187EDF = {
+			isa = PBXGroup;
+			children = (
+				68F3E79788314FB68CCAD8F5 /* ALL_BUILD */,
+				39B95CF467B9449599FC1374 /* glew */,
+				01DB869D040646C6A26B9094 /* uninstall */,
+				916270F46CB3433080A029F5 /* GLFW3 */,
+				8508F057C3324DA9BB9AC420 /* CGL */,
+				84A368A5658C475B92A6CCD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC5745E7A5BF4A3FACE164F6 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D9C1F77743D4E479FED65A2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glew.c */,
+				36DB7807238F45439DE9AE40 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glewinfo.c */,
+				98658545C3374873BB954F0C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/visualinfo.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1412A6403CC14EBE890DA42C /* CGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6631FB380045E69F363762 /* Build configuration list for PBXNativeTarget "CGL" */;
+			buildPhases = (
+				5B4227D2CDA848CF906812C1 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB82918C3ED04CED8702D542 /* PBXTargetDependency */,
+			);
+			name = CGL;
+			productName = CGL;
+			productReference = 3561C654EAC9412DB564A4B8 /* CGL */;
+			productType = "com.apple.product-type.library.static";
+		};
+		68CE3F23029943439B2F48FF /* glew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C281CF443654467597C8E464 /* Build configuration list for PBXNativeTarget "glew" */;
+			buildPhases = (
+				09E5AE808F6D4DD38EF4C883 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glew;
+			productName = glew;
+			productReference = D00112E5BB694CBBBE28D09F /* glew */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8EEA1DDD19664ACEA4332DA3 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B7BFFF0576C45839E281D56 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				581DE0BA9BF54E3693BA6C59 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = glfw;
+			productName = glfw;
+			productReference = B19B55F0935D49419272B9F4 /* glfw */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14371C3E2CCA4EE1B40BF755 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1010;
+			};
+			buildConfigurationList = 4F132EAA715F4F0B8D2D5AC4 /* Build configuration list for PBXProject "CGL" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				7ED83A047B20431AB48B54D8 /* Debug */,
+				BBA19667F18E4DCBA9016C95 /* Release */,
+				150F4228565A486D81337800 /* MinSizeRel */,
+				29A983EB2DB341DF9174121C /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = C96FA5F5AB7644D9B0187EDF;
+			projectDirPath = ../../CGL;
+			projectRoot = "";
+			targets = (
+				9E0D962B09A2442EA1805B1D /* ALL_BUILD */,
+				1412A6403CC14EBE890DA42C /* CGL */,
+				8C28213D39644DBDB7E9A0E0 /* ZERO_CHECK */,
+				68CE3F23029943439B2F48FF /* glew */,
+				8EEA1DDD19664ACEA4332DA3 /* glfw */,
+				99C4CE9D36094C26B83922F7 /* install */,
+				5FD7878318E245D09059641C /* uninstall */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E05A33AE9014960B8FFAE9B /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw -f /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		8E22334132D148B78040B4DD /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL -f /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		C58C6D1085D34744A47A0C18 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C89BF7D607D14E1E94E73272 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C99CB71AB77A4F77A57AF761 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL -f /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		D5BCF224FBFB438AB4AAD857 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL -f /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E39663E5DAFC4ADC9CC22F36 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		F936E4D5683E456A85631FC5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09E5AE808F6D4DD38EF4C883 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D999A7FB91C4DE5A4BF53D4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glew.c */,
+				C39624BE3099461DA399ABB3 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/glewinfo.c */,
+				C9A881EF150A4A909F684354 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/src/visualinfo.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581DE0BA9BF54E3693BA6C59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F343DD5166A48C58349FF5A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_init.m */,
+				264DA0F4F3A14F9BBA8C8E84 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_monitor.m */,
+				26AA8227EDBD4A94A2F3DAE6 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/cocoa_window.m */,
+				35BC0EA1F4744F3FACD57E8D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/context.c */,
+				FEA865A49FE247B0BC338F94 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/init.c */,
+				CA6DCFDCFFC844E7A117C802 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/input.c */,
+				504E76282EA64F779309AFE0 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/iokit_joystick.m */,
+				95BAB75536ED4C149EF8447D /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/mach_time.c */,
+				011161670676446093407F5C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/monitor.c */,
+				56F1975ABD50445191DCBA13 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/nsgl_context.m */,
+				8448626D72DA48F9A40C1A27 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/posix_tls.c */,
+				30805C0CB9EF4350A0519636 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src/window.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B4227D2CDA848CF906812C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CE19340E3954A2490F6BEB0 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/base64.cpp */,
+				45F409F64A77410186EFFE81 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/color.cpp */,
+				733FB30902D1434DB7659412 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/complex.cpp */,
+				25AA5AF22EA748809F44C3A2 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/lodepng.cpp */,
+				D18818A039984953BFB10AE1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix3x3.cpp */,
+				536FDC837F5C4B4F9DB0D82C /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/matrix4x4.cpp */,
+				D3C0E7A5F5EF469E9E33E53E /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdfont.cpp */,
+				72C0B1551696404483BDB29A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/osdtext.cpp */,
+				02D8AE4664C34822AA30E73A /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/path.cpp */,
+				E2C31DBAC70F4ADEB514C6F4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/quaternion.cpp */,
+				31A0F927C522441084D708AB /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/spectrum.cpp */,
+				6B0B06FECF254072AF9434F1 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/tinyxml2.cpp */,
+				2D59AF3C5BD14F00AF378CE4 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector2D.cpp */,
+				B4C77EC9F2ED4ACCB516A1AA /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector3D.cpp */,
+				7785F03EE4C54AC8B364BA67 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/vector4D.cpp */,
+				C5BA0EF6A2C946AF99DCBC06 /* /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/src/viewer.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BB3EC7AD6A947F0AC1084DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68CE3F23029943439B2F48FF /* glew */;
+			targetProxy = 414B314F752B49A88B7EF233 /* PBXContainerItemProxy */;
+		};
+		5243D0BDDBF448E099BFA374 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1412A6403CC14EBE890DA42C /* CGL */;
+			targetProxy = D9CDBF24640D457D8F92DC6E /* PBXContainerItemProxy */;
+		};
+		BDD5337AC37D4957BADFC7E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E0D962B09A2442EA1805B1D /* ALL_BUILD */;
+			targetProxy = DF44945AC41148E7B58BB240 /* PBXContainerItemProxy */;
+		};
+		DB82918C3ED04CED8702D542 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 68CE3F23029943439B2F48FF /* glew */;
+			targetProxy = 8659FB27A2F345FCB85C1115 /* PBXContainerItemProxy */;
+		};
+		F9A42672025A4E328B1FA8C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8EEA1DDD19664ACEA4332DA3 /* glfw */;
+			targetProxy = 2D5786E70EC645DEB4305F98 /* PBXContainerItemProxy */;
+		};
+		FD8F7A656ED54DC3998D095C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C28213D39644DBDB7E9A0E0 /* ZERO_CHECK */;
+			targetProxy = 5C4FF2CA4CA44B969615F03B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08B2627327654B63B3A321CE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1E83A1ECDA9A45A4B95C221C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register        -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2A886605D21E48BDBA8897CF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		2BF1B13C31D3472F824F6ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		35F226A139DE44B785EE9525 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register     -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		38F01AF89A0943A2BB66F453 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3B1B63DFFA24439391F465AB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3D6E189C324F47A2AB48EE0B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/build";
+			};
+			name = RelWithDebInfo;
+		};
+		3EA1A9B65CBA4B5FAE7BE7C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		40965681F7904A038A34BC67 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/build";
+			};
+			name = MinSizeRel;
+		};
+		40E69B97DCD44AA98A1C865A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4DB714D8C0014FEEA31AF6C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		7000728D64244ADFB68FCBC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/build";
+			};
+			name = Release;
+		};
+		88A6CD3EF6214FD08953AED6 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		916D7CD69B1B45ADA9A4C2FD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register     -DNDEBUG -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		961F399E8CA94CD2AEE3B4D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9B05775EBF3B4D91A1AC5D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		9E2F7D3AF36B40E89292F775 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AEF662FF225045028A2E05A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/build";
+			};
+			name = Debug;
+		};
+		B07851A4080A475BB3F4CD57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include",/usr/local/include/freetype2,"/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/include/CGL");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CPLUSPLUSFLAGS = " -std=c++11 -m64     -funroll-loops -Wno-narrowing -Wno-deprecated-register    -Wno-constant-conversion  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CGL_osx;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		BC6FFEE96B594321876DCF0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		CB5AF425648C4FD6B7C3183D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CC63F262E71841D48ACFBC6A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC,_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glfw/src","/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -w   -Wall";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D0E705A16E934A3B970035E4 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D79EE015A5A04D9CAA3A565D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E790E1B2CAAF4096BC616A66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		EC65E8EBF12549FDAAA8B9A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",GLEW_STATIC);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL/deps/glew/include");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -w  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glew;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glew";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		EDE5153A0FF64030897C8C3B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F0A48FD7F9134717ABCC1F9A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		F2631D7A786B49F18CE14441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F3A09A3101C74D18892F6E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		F4635B4149934481BCE95F26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10CEA5E6BA6449E2917365F5 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3A09A3101C74D18892F6E68 /* Debug */,
+				BC6FFEE96B594321876DCF0C /* Release */,
+				EDE5153A0FF64030897C8C3B /* MinSizeRel */,
+				CB5AF425648C4FD6B7C3183D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3B6631FB380045E69F363762 /* Build configuration list for PBXNativeTarget "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B07851A4080A475BB3F4CD57 /* Debug */,
+				35F226A139DE44B785EE9525 /* Release */,
+				916D7CD69B1B45ADA9A4C2FD /* MinSizeRel */,
+				1E83A1ECDA9A45A4B95C221C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4F132EAA715F4F0B8D2D5AC4 /* Build configuration list for PBXProject "CGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEF662FF225045028A2E05A6 /* Debug */,
+				7000728D64244ADFB68FCBC3 /* Release */,
+				40965681F7904A038A34BC67 /* MinSizeRel */,
+				3D6E189C324F47A2AB48EE0B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6E38040181B84F1B90EC9066 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				961F399E8CA94CD2AEE3B4D5 /* Debug */,
+				F2631D7A786B49F18CE14441 /* Release */,
+				08B2627327654B63B3A321CE /* MinSizeRel */,
+				40E69B97DCD44AA98A1C865A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8B7BFFF0576C45839E281D56 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EA1A9B65CBA4B5FAE7BE7C5 /* Debug */,
+				4DB714D8C0014FEEA31AF6C8 /* Release */,
+				9E2F7D3AF36B40E89292F775 /* MinSizeRel */,
+				CC63F262E71841D48ACFBC6A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA56CDBA899942C7B73D8FC6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E790E1B2CAAF4096BC616A66 /* Debug */,
+				2BF1B13C31D3472F824F6ED1 /* Release */,
+				D0E705A16E934A3B970035E4 /* MinSizeRel */,
+				F0A48FD7F9134717ABCC1F9A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C281CF443654467597C8E464 /* Build configuration list for PBXNativeTarget "glew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B05775EBF3B4D91A1AC5D54 /* Debug */,
+				EC65E8EBF12549FDAAA8B9A4 /* Release */,
+				D79EE015A5A04D9CAA3A565D /* MinSizeRel */,
+				88A6CD3EF6214FD08953AED6 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C78133C243A6487FBB509F4A /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4635B4149934481BCE95F26 /* Debug */,
+				38F01AF89A0943A2BB66F453 /* Release */,
+				3B1B63DFFA24439391F465AB /* MinSizeRel */,
+				2A886605D21E48BDBA8897CF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14371C3E2CCA4EE1B40BF755 /* Project object */;
+}
