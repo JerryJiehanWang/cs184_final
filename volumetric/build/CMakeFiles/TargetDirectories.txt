@@ -1,5 +1,0 @@
-/Users/xuyun/desktop/cs184_final/volumetric/build/src/CMakeFiles/pathtracer.dir
-/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/deps/glfw/CMakeFiles/uninstall.dir
-/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/deps/glfw/src/CMakeFiles/glfw.dir
-/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/src/CMakeFiles/CGL.dir
-/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/deps/glew/CMakeFiles/glew.dir

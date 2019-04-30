@@ -9,6 +9,20 @@
       padding-left: 100px;  
     }  
   </style> 
+<style>
+  body {
+    padding: 100px;
+    width: 1000px;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    color: #121212;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+</style>
 <title>CS184 Final Project</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
@@ -19,7 +33,10 @@
     <h2 align="middle">Yun Xu, Jiayue Tao, Jiehan Wang</h2>
 
     <h2 align="middle">Current Progress</h2>
-        <p>On top of all, We figured out the algorithm to participate media in path tracing. The genral idea is to view particles in medium as a whole, and the ray traveling through the medium has a probability of being either absorbed or scattered by the medium, related to the time t it travels. We decided to implement our volumetric path tracing based on the code of Project 3. We first only considered direct lighting and implemented a new function <code>estimate_paticle_lighting_importance()</code> in <code>pathtracer.cpp</code>. As so far, it can render a medium effect in the cornel box without considering any other objects. The medium will change as we change the parameter <code>scatter</code> and <code>extinction</code>. We can also change its color by adding a spectrum to make the medium more obvious.</p>
+        <p>On top of all, We figured out the algorithm to participate media in path tracing. The general idea is to view particles in medium as a whole, and the ray traveling through the medium has a probability of being either absorbed or scattered by the medium, related to the time t it travels. We decided to implement our volumetric path tracing based on the code of Project 3. We first only considered direct lighting and implemented a new function <code>estimate_paticle_lighting_importance()</code> in <code>pathtracer.cpp</code>. As so far, it can render a medium effect in the cornel box without considering any other objects. The medium will change as we change the parameter <code>scatter</code> and <code>extinction</code>. We can also change its color by adding a spectrum to make the medium more obvious.</p>
+        <p>
+          Turn up your screen's display brightness to see the fog!
+        </p>
         <p>Presentation slides <a href="https://cs184.eecs.berkeley.edu/sp19/lecture/9-22/raytracing">https://cs184.eecs.berkeley.edu/sp19/lecture/9-22/raytracing</a></p>
         <p>Video link <a href="https://cs184.eecs.berkeley.edu/sp19/lecture/9-22/raytracing">https://cs184.eecs.berkeley.edu/sp19/lecture/9-22/raytracing</a></p>        
     <div align="middle">
@@ -70,7 +87,23 @@
     </div>
 
     <h2 align="middle">Problem We Met</h2>
-        <p></p>
+        <p>
+          During our implementation of estimation of the radiance of particles in a media with direct illumination & importance sampling, we encountered a couple of difficulties. Because we modelled our implementation based on the importance sampling at surface hitpoints in project 3-1, the first problem that we encountered was that we did not remove the lambertian cosine term when estimating irradiance. We forgot that the atmosphere does not use the cosine term to evaluate falloff; instead, we need to multiply by a coefficient (scattering coeffient / extinction coefficient) to account for "falloff" due to outscattering. Another issue that we encountered was re-writing raytrace_pixel() to weight each sample by its probability distribution based on the exponential decay of ray marching. Originally in proj3, this was not considered because every ray hits the same surface hitpoint with 100% probability. For volumetric rendering, however, we need to biase each sample because different camera rays from the same pixel land on different positions in the scene based on the medium. After realizing this, we modified our code to make sure the overal estimation is unbiased.
+        </p>
+        <p>
+          The following is a rendering of the Cornell Box with red-colored fog in the room. There are still some inaccuracies with this rendering, like the depth of the fog and its interaction with the area light, but it shows a relatively clear effect of volumetric rendering.
+        </p>
+        <div align="middle">
+      <table style="width=100%"> 
+        <tr>
+          <td>
+            <img src="redfog.png" align="middle" width="400px"/>
+            <figcaption align="middle">Red Fog in the Room</figcaption>
+          </td>
+        </tr>
+      </table>
+    </div>
+
  
  </body>
 
