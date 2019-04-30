@@ -1,4 +1,4 @@
-# Install script for directory: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/src
+# Install script for directory: /Users/xuyun/desktop/cs184_final/volumetric/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -27,75 +27,23 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Dd][Ee][Bb][Uu][Gg])$")
-    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-file(INSTALL DESTINATION "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao" TYPE EXECUTABLE FILES "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/Debug/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      endif()
-    endif()
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-file(INSTALL DESTINATION "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao" TYPE EXECUTABLE FILES "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/Release/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      endif()
-    endif()
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Mm][Ii][Nn][Ss][Ii][Zz][Ee][Rr][Ee][Ll])$")
-    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-file(INSTALL DESTINATION "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao" TYPE EXECUTABLE FILES "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/MinSizeRel/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      endif()
-    endif()
-  elseif("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-     "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-    if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-    if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-        message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-    endif()
-file(INSTALL DESTINATION "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao" TYPE EXECUTABLE FILES "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/RelWithDebInfo/pathtracer")
-    if(EXISTS "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer" AND
-       NOT IS_SYMLINK "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      if(CMAKE_INSTALL_DO_STRIP)
-        execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/pathtracer")
-      endif()
+if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+   "/Users/xuyun/desktop/cs184_final/volumetric/pathtracer")
+  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
+  endif()
+file(INSTALL DESTINATION "/Users/xuyun/desktop/cs184_final/volumetric" TYPE EXECUTABLE FILES "/Users/xuyun/desktop/cs184_final/volumetric/build/pathtracer")
+  if(EXISTS "$ENV{DESTDIR}/Users/xuyun/desktop/cs184_final/volumetric/pathtracer" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/Users/xuyun/desktop/cs184_final/volumetric/pathtracer")
+    execute_process(COMMAND /usr/bin/install_name_tool
+      -delete_rpath "/Users/xuyun/anaconda2/lib"
+      "$ENV{DESTDIR}/Users/xuyun/desktop/cs184_final/volumetric/pathtracer")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip" "$ENV{DESTDIR}/Users/xuyun/desktop/cs184_final/volumetric/pathtracer")
     endif()
   endif()
 endif()

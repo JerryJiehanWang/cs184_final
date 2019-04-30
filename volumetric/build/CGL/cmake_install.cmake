@@ -1,8 +1,8 @@
-# Install script for directory: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL
+# Install script for directory: /Users/xuyun/desktop/cs184_final/volumetric/CGL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/CGL")
+  set(CMAKE_INSTALL_PREFIX "/Users/xuyun/desktop/cs184_final/volumetric/CGL")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -27,16 +27,11 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glew/cmake_install.cmake")
-  include("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/deps/glfw/cmake_install.cmake")
-  include("/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CGL/src/cmake_install.cmake")
+  include("/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/deps/glew/cmake_install.cmake")
+  include("/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/deps/glfw/cmake_install.cmake")
+  include("/Users/xuyun/desktop/cs184_final/volumetric/build/CGL/src/cmake_install.cmake")
 
 endif()
 

@@ -1,296 +1,107 @@
-The system is: Darwin - 17.7.0 - x86_64
+The system is: Darwin - 18.2.0 - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler:  
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
 Build flags: 
-Id flags:  
+Id flags: 
 
 The output was:
 0
-note: Using new build system
-note: Planning build
-note: Constructing build description
-Build system information
-warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'CompilerIdC')
-
-CreateBuildDirectory /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    builtin-create-build-directory /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/all-product-headers.yaml
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-non-framework-target-headers.hmap
-
-CompileC /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CMakeCCompilerId.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -fvisibility=hidden -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -iquote /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-generated-files.hmap -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-own-target-headers.hmap -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-all-target-headers.hmap -iquote /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC-project-headers.hmap -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/include -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/x86_64 -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources -F/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC -MMD -MT dependencies -MF /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.d --serialize-diagnostics /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CMakeCCompilerId.c -o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CMakeCCompilerId.o
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList
-
-Ld /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC normal x86_64 (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC -F/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC -filelist /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC_lto.o -Xlinker -dependency_info -Xlinker /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/x86_64/CompilerIdC_dependency_info.dat -o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-
-PhaseScriptExecution Run\ Script /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target: CompilerIdC)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC
-    /bin/sh -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-GCC_VERSION=com.apple.compilers.llvm.clang.1_0
-ARCHS=x86_64
-
-** BUILD SUCCEEDED **
 
 
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC"
-
-The C compiler identification is AppleClang, found in "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdC/CompilerIdC"
+The C compiler identification is AppleClang, found in "/Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/3.4.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler:  
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
 Build flags: 
-Id flags:  
+Id flags: 
 
 The output was:
 0
-note: Using new build system
-note: Planning build
-note: Constructing build description
-Build system information
-warning: Traditional headermap style is no longer supported; please migrate to using separate headermaps and set 'ALWAYS_SEARCH_USER_PATHS' to NO. (in target 'CompilerIdCXX')
-
-CreateBuildDirectory /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    builtin-create-build-directory /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/all-product-headers.yaml
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-non-framework-target-headers.hmap
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList
-
-CompileC /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CMakeCXXCompilerId.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -iquote /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-generated-files.hmap -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-own-target-headers.hmap -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-all-target-headers.hmap -iquote /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/CompilerIdCXX-project-headers.hmap -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/include -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources/x86_64 -I/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/DerivedSources -F/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX -MMD -MT dependencies -MF /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.d --serialize-diagnostics /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CMakeCXXCompilerId.cpp -o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CMakeCXXCompilerId.o
-
-Ld /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX normal x86_64 (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX -F/Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX -filelist /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX_lto.o -Xlinker -dependency_info -Xlinker /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Objects-normal/x86_64/CompilerIdCXX_dependency_info.dat -o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX
-
-WriteAuxiliaryFile /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    write-file /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-
-PhaseScriptExecution Run\ Script /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh (in target: CompilerIdCXX)
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX
-    /bin/sh -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX.build/Debug/CompilerIdCXX.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
-GCC_VERSION=com.apple.compilers.llvm.clang.1_0
-ARCHS=x86_64
-
-** BUILD SUCCEEDED **
 
 
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX"
-
-The CXX compiler identification is AppleClang, found in "/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/3.13.3/CompilerIdCXX/CompilerIdCXX"
+The CXX compiler identification is AppleClang, found in "/Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/3.4.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_a9c4c" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_a9c4c OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/cmTC_a9c4c.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/testCCompiler.o testCCompiler.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/testCCompiler.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/testCCompiler.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/testCCompiler.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/testCCompiler.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_a9c4c normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/cmTC_a9c4c.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/cmTC_a9c4c_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a9c4c.build/Objects-normal/x86_64/cmTC_a9c4c_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_a9c4c
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_cf0e8/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_cf0e8.dir/build.make CMakeFiles/cmTC_cf0e8.dir/build
+Building C object CMakeFiles/cmTC_cf0e8.dir/testCCompiler.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_cf0e8.dir/testCCompiler.c.o   -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_cf0e8
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf0e8.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_cf0e8.dir/testCCompiler.c.o  -o cmTC_cf0e8  
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_08a7a" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_08a7a OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.o /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a
-Apple LLVM version 10.0.0 (clang-1000.11.45.5)
-Target: x86_64-apple-darwin17.7.0
+Run Build Command:"/usr/bin/make" "cmTC_ff246/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_ff246.dir/build.make CMakeFiles/cmTC_ff246.dir/build
+Building C object CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.4.2/share/cmake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_ff246
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff246.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o  -o cmTC_ff246   
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Target: x86_64-apple-darwin18.2.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug
-@(#)PROGRAM:ld  PROJECT:ld64-409.12
-BUILD 17:47:51 Sep 25 2018
-configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em arm64e arm64_32
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o cmTC_ff246 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-450.3
+BUILD 18:45:16 Apr  4 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
 Library search paths:
-	/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib
 Framework search paths:
-	/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/
-
-** BUILD SUCCEEDED **
-
 
 
 Parsed C implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_08a7a" "-configuration" "Debug"]
-  ignore line: [Prepare build]
-  ignore line: [note: Using legacy build system]
-  ignore line: []
-  ignore line: [=== BUILD TARGET cmTC_08a7a OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===]
-  ignore line: []
-  ignore line: [Check dependencies]
-  ignore line: []
-  ignore line: [Write auxiliary files]
-  ignore line: [/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64]
-  ignore line: [write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList]
-  ignore line: []
-  ignore line: [CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.o /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler]
-  ignore line: [    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp]
-  ignore line: [    export LANG=en_US.US-ASCII]
-  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.dia -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCCompilerABI.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/CMakeCCompilerABI.o]
-  ignore line: []
-  ignore line: [Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a normal x86_64]
-  ignore line: [    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp]
-  ignore line: [    export MACOSX_DEPLOYMENT_TARGET=10.13]
-  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a]
-  ignore line: [Apple LLVM version 10.0.0 (clang-1000.11.45.5)]
-  ignore line: [Target: x86_64-apple-darwin17.7.0]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ff246/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_ff246.dir/build.make CMakeFiles/cmTC_ff246.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.4.2/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_ff246]
+  ignore line: [/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ff246.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o  -o cmTC_ff246   ]
+  ignore line: [Apple LLVM version 10.0.1 (clang-1001.0.46.4)]
+  ignore line: [Target: x86_64-apple-darwin18.2.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug]
-            to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a ]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a ]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o cmTC_ff246 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
-    arg [-lto_library] ==> ignore, skip following value
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-lto_library] ==> lib [to_library]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> ignore
     arg [-dynamic] ==> ignore
     arg [-arch] ==> ignore
     arg [x86_64] ==> ignore
     arg [-macosx_version_min] ==> ignore
-    arg [10.13.0] ==> ignore
+    arg [10.14.0] ==> ignore
     arg [-syslibroot] ==> ignore
     arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_08a7a] ==> ignore
-    arg [-filelist] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a.LinkFileList] ==> ignore
-    arg [-object_path_lto] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_lto.o] ==> ignore
-    arg [-no_deduplicate] ==> ignore
-    arg [-v] ==> ignore
+    arg [cmTC_ff246] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
-    arg [-dependency_info] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_08a7a.build/Objects-normal/x86_64/cmTC_08a7a_dependency_info.dat] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_ff246.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lSystem] ==> lib [System]
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
-  Library search paths: [;/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
-  Framework search paths: [;/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
+  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/]
   remove lib [System]
-  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
-  collapse library dir [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
   collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
-  collapse framework dir [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
   collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks]
-  implicit libs: []
+  implicit libs: [to_library;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
   implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
   implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks]
 
@@ -298,32 +109,15 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_05d81" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_05d81 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/cmTC_05d81.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c11 -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_05d81 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/cmTC_05d81.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/cmTC_05d81_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_05d81.build/Objects-normal/x86_64/cmTC_05d81_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_05d81
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_d1f38/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_d1f38.dir/build.make CMakeFiles/cmTC_d1f38.dir/build
+Building C object CMakeFiles/cmTC_d1f38.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=c11 -o CMakeFiles/cmTC_d1f38.dir/feature_tests.c.o   -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d1f38
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1f38.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_d1f38.dir/feature_tests.c.o  -o cmTC_d1f38  
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -333,32 +127,15 @@ Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_13391" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_13391 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/cmTC_13391.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c99 -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_13391 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/cmTC_13391.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/cmTC_13391_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_13391.build/Objects-normal/x86_64/cmTC_13391_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_13391
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_9d89f/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_9d89f.dir/build.make CMakeFiles/cmTC_9d89f.dir/build
+Building C object CMakeFiles/cmTC_9d89f.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=c99 -o CMakeFiles/cmTC_9d89f.dir/feature_tests.c.o   -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_9d89f
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d89f.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_9d89f.dir/feature_tests.c.o  -o cmTC_9d89f  
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -368,32 +145,15 @@ Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_d82e2" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_d82e2 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/cmTC_d82e2.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c90 -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_d82e2 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/cmTC_d82e2.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/cmTC_d82e2_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_d82e2.build/Objects-normal/x86_64/cmTC_d82e2_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_d82e2
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_57abd/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_57abd.dir/build.make CMakeFiles/cmTC_57abd.dir/build
+Building C object CMakeFiles/cmTC_57abd.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=c90 -o CMakeFiles/cmTC_57abd.dir/feature_tests.c.o   -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_57abd
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57abd.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_57abd.dir/feature_tests.c.o  -o cmTC_57abd  
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -401,265 +161,99 @@ Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_a7b46" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_a7b46 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/cmTC_a7b46.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/testCXXCompiler.o testCXXCompiler.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/testCXXCompiler.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/testCXXCompiler.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/testCXXCompiler.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_a7b46 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/cmTC_a7b46.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/cmTC_a7b46_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_a7b46.build/Objects-normal/x86_64/cmTC_a7b46_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_a7b46
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_bf8a6/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_bf8a6.dir/build.make CMakeFiles/cmTC_bf8a6.dir/build
+Building CXX object CMakeFiles/cmTC_bf8a6.dir/testCXXCompiler.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_bf8a6.dir/testCXXCompiler.cxx.o -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_bf8a6
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf8a6.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_bf8a6.dir/testCXXCompiler.cxx.o  -o cmTC_bf8a6  
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_e754b" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_e754b OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b
-Apple LLVM version 10.0.0 (clang-1000.11.45.5)
-Target: x86_64-apple-darwin17.7.0
+Run Build Command:"/usr/bin/make" "cmTC_a7727/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a7727.dir/build.make CMakeFiles/cmTC_a7727.dir/build
+Building CXX object CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.4.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_a7727
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7727.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a7727   
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Target: x86_64-apple-darwin18.2.0
 Thread model: posix
 InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug
-@(#)PROGRAM:ld  PROJECT:ld64-409.12
-BUILD 17:47:51 Sep 25 2018
-configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em arm64e arm64_32
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o cmTC_a7727 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-450.3
+BUILD 18:45:16 Apr  4 2019
+configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
 Library search paths:
-	/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib
 Framework search paths:
-	/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/
-
-** BUILD SUCCEEDED **
-
 
 
 Parsed CXX implicit link information from above output:
-  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp]
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_e754b" "-configuration" "Debug"]
-  ignore line: [Prepare build]
-  ignore line: [note: Using legacy build system]
-  ignore line: []
-  ignore line: [=== BUILD TARGET cmTC_e754b OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===]
-  ignore line: []
-  ignore line: [Check dependencies]
-  ignore line: []
-  ignore line: [Write auxiliary files]
-  ignore line: [/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64]
-  ignore line: [write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList]
-  ignore line: []
-  ignore line: [CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler]
-  ignore line: [    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp]
-  ignore line: [    export LANG=en_US.US-ASCII]
-  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.dia -c /usr/local/Cellar/cmake/3.13.3/share/cmake/Modules/CMakeCXXCompilerABI.cpp -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/CMakeCXXCompilerABI.o]
-  ignore line: []
-  ignore line: [Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b normal x86_64]
-  ignore line: [    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp]
-  ignore line: [    export MACOSX_DEPLOYMENT_TARGET=10.13]
-  ignore line: [    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o -Xlinker -no_deduplicate -v -Wl,-v -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b]
-  ignore line: [Apple LLVM version 10.0.0 (clang-1000.11.45.5)]
-  ignore line: [Target: x86_64-apple-darwin17.7.0]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a7727/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_a7727.dir/build.make CMakeFiles/cmTC_a7727.dir/build]
+  ignore line: [Building CXX object CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/Cellar/cmake/3.4.2/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_a7727]
+  ignore line: [/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7727.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_a7727   ]
+  ignore line: [Apple LLVM version 10.0.1 (clang-1001.0.46.4)]
+  ignore line: [Target: x86_64-apple-darwin18.2.0]
   ignore line: [Thread model: posix]
   ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-  reduced line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug]
-            to: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a ]
-  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.13.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList -object_path_lto /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o -no_deduplicate -v -search_paths_first -headerpad_max_install_names -dependency_info /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a ]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.14.0 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -o cmTC_a7727 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
     arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
     arg [-demangle] ==> ignore
-    arg [-lto_library] ==> ignore, skip following value
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-lto_library] ==> lib [to_library]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> ignore
     arg [-dynamic] ==> ignore
     arg [-arch] ==> ignore
     arg [x86_64] ==> ignore
     arg [-macosx_version_min] ==> ignore
-    arg [10.13.0] ==> ignore
+    arg [10.14.0] ==> ignore
     arg [-syslibroot] ==> ignore
     arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk] ==> ignore
     arg [-o] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e754b] ==> ignore
-    arg [-filelist] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b.LinkFileList] ==> ignore
-    arg [-object_path_lto] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_lto.o] ==> ignore
-    arg [-no_deduplicate] ==> ignore
-    arg [-v] ==> ignore
+    arg [cmTC_a7727] ==> ignore
     arg [-search_paths_first] ==> ignore
     arg [-headerpad_max_install_names] ==> ignore
-    arg [-dependency_info] ==> ignore
-    arg [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e754b.build/Objects-normal/x86_64/cmTC_e754b_dependency_info.dat] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_a7727.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lc++] ==> lib [c++]
     arg [-lSystem] ==> lib [System]
-    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
-  Library search paths: [;/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
-  Framework search paths: [;/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
+  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/]
   remove lib [System]
-  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/lib/darwin/libclang_rt.osx.a]
-  collapse library dir [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
   collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
-  collapse framework dir [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug] ==> [/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug], skipping non-system directory
   collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks]
-  implicit libs: [c++]
+  implicit libs: [to_library;c++;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.1/lib/darwin/libclang_rt.osx.a]
   implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/lib]
   implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks]
 
 
 
 
-Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_fc3ae" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_fc3ae OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/cmTC_fc3ae.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c++1z -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc3ae normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/cmTC_fc3ae.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/cmTC_fc3ae_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_fc3ae.build/Objects-normal/x86_64/cmTC_fc3ae_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_fc3ae
-
-** BUILD SUCCEEDED **
-
-
-
-    Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
-    Feature record: CXX_FEATURE:1cxx_alias_templates
-    Feature record: CXX_FEATURE:1cxx_alignas
-    Feature record: CXX_FEATURE:1cxx_alignof
-    Feature record: CXX_FEATURE:1cxx_attributes
-    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
-    Feature record: CXX_FEATURE:1cxx_auto_type
-    Feature record: CXX_FEATURE:1cxx_binary_literals
-    Feature record: CXX_FEATURE:1cxx_constexpr
-    Feature record: CXX_FEATURE:1cxx_contextual_conversions
-    Feature record: CXX_FEATURE:1cxx_decltype
-    Feature record: CXX_FEATURE:1cxx_decltype_auto
-    Feature record: CXX_FEATURE:1cxx_decltype_incomplete_return_types
-    Feature record: CXX_FEATURE:1cxx_default_function_template_args
-    Feature record: CXX_FEATURE:1cxx_defaulted_functions
-    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
-    Feature record: CXX_FEATURE:1cxx_delegating_constructors
-    Feature record: CXX_FEATURE:1cxx_deleted_functions
-    Feature record: CXX_FEATURE:1cxx_digit_separators
-    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
-    Feature record: CXX_FEATURE:1cxx_explicit_conversions
-    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
-    Feature record: CXX_FEATURE:1cxx_extern_templates
-    Feature record: CXX_FEATURE:1cxx_final
-    Feature record: CXX_FEATURE:1cxx_func_identifier
-    Feature record: CXX_FEATURE:1cxx_generalized_initializers
-    Feature record: CXX_FEATURE:1cxx_generic_lambdas
-    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
-    Feature record: CXX_FEATURE:1cxx_inline_namespaces
-    Feature record: CXX_FEATURE:1cxx_lambdas
-    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
-    Feature record: CXX_FEATURE:1cxx_local_type_template_args
-    Feature record: CXX_FEATURE:1cxx_long_long_type
-    Feature record: CXX_FEATURE:1cxx_noexcept
-    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
-    Feature record: CXX_FEATURE:1cxx_nullptr
-    Feature record: CXX_FEATURE:1cxx_override
-    Feature record: CXX_FEATURE:1cxx_range_for
-    Feature record: CXX_FEATURE:1cxx_raw_string_literals
-    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
-    Feature record: CXX_FEATURE:1cxx_relaxed_constexpr
-    Feature record: CXX_FEATURE:1cxx_return_type_deduction
-    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
-    Feature record: CXX_FEATURE:1cxx_rvalue_references
-    Feature record: CXX_FEATURE:1cxx_sizeof_member
-    Feature record: CXX_FEATURE:1cxx_static_assert
-    Feature record: CXX_FEATURE:1cxx_strong_enums
-    Feature record: CXX_FEATURE:1cxx_template_template_parameters
-    Feature record: CXX_FEATURE:1cxx_thread_local
-    Feature record: CXX_FEATURE:1cxx_trailing_return_types
-    Feature record: CXX_FEATURE:1cxx_unicode_literals
-    Feature record: CXX_FEATURE:1cxx_uniform_initialization
-    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
-    Feature record: CXX_FEATURE:1cxx_user_literals
-    Feature record: CXX_FEATURE:1cxx_variable_templates
-    Feature record: CXX_FEATURE:1cxx_variadic_macros
-    Feature record: CXX_FEATURE:1cxx_variadic_templates
-
-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_0f5f2" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_0f5f2 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/cmTC_0f5f2.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c++14 -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_0f5f2 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/cmTC_0f5f2.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/cmTC_0f5f2_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_0f5f2.build/Objects-normal/x86_64/cmTC_0f5f2_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_0f5f2
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_1a48d/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_1a48d.dir/build.make CMakeFiles/cmTC_1a48d.dir/build
+Building CXX object CMakeFiles/cmTC_1a48d.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=c++14 -o CMakeFiles/cmTC_1a48d.dir/feature_tests.cxx.o -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1a48d
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a48d.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_1a48d.dir/feature_tests.cxx.o  -o cmTC_1a48d  
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -722,32 +316,15 @@ Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_8b57f" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_8b57f OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/cmTC_8b57f.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c++11 -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_8b57f normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/cmTC_8b57f.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/cmTC_8b57f_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_8b57f.build/Objects-normal/x86_64/cmTC_8b57f_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_8b57f
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_5568c/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_5568c.dir/build.make CMakeFiles/cmTC_5568c.dir/build
+Building CXX object CMakeFiles/cmTC_5568c.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=c++11 -o CMakeFiles/cmTC_5568c.dir/feature_tests.cxx.o -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5568c
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5568c.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5568c.dir/feature_tests.cxx.o  -o cmTC_5568c  
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -810,32 +387,15 @@ Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_e3e5b" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_e3e5b OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/cmTC_e3e5b.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/feature_tests.o /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -std=c++98 -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/feature_tests.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/feature_tests.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/feature_tests.cxx -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/feature_tests.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e3e5b normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/cmTC_e3e5b.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/cmTC_e3e5b_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_e3e5b.build/Objects-normal/x86_64/cmTC_e3e5b_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_e3e5b
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_5184f/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_5184f.dir/build.make CMakeFiles/cmTC_5184f.dir/build
+Building CXX object CMakeFiles/cmTC_5184f.dir/feature_tests.cxx.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -std=c++98 -o CMakeFiles/cmTC_5184f.dir/feature_tests.cxx.o -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5184f
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5184f.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++     -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_5184f.dir/feature_tests.cxx.o  -o cmTC_5184f  
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -896,63 +456,29 @@ Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
 Determining if the include file pthread.h exists passed with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_16505" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
-
-=== BUILD TARGET cmTC_16505 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/cmTC_16505.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/CheckIncludeFile.o CheckIncludeFile.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/CheckIncludeFile.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/CheckIncludeFile.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/CheckIncludeFile.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_16505 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/cmTC_16505.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/cmTC_16505_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_16505.build/Objects-normal/x86_64/cmTC_16505_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_16505
-
-** BUILD SUCCEEDED **
-
+Run Build Command:"/usr/bin/make" "cmTC_e9658/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e9658.dir/build.make CMakeFiles/cmTC_e9658.dir/build
+Building C object CMakeFiles/cmTC_e9658.dir/CheckIncludeFile.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_e9658.dir/CheckIncludeFile.c.o   -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e9658
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e9658.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_e9658.dir/CheckIncludeFile.c.o  -o cmTC_e9658  
 
 
 Determining if the pthread_create exist passed with the following output:
-Change Dir: /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/xcodebuild" "-project" "CMAKE_TRY_COMPILE.xcodeproj" "build" "-target" "cmTC_3d118" "-configuration" "Debug"
-Prepare build
-note: Using legacy build system
+Run Build Command:"/usr/bin/make" "cmTC_88af8/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_88af8.dir/build.make CMakeFiles/cmTC_88af8.dir/build
+Building C object CMakeFiles/cmTC_88af8.dir/CheckSymbolExists.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -o CMakeFiles/cmTC_88af8.dir/CheckSymbolExists.c.o   -c /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_88af8
+/usr/local/Cellar/cmake/3.4.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88af8.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names   CMakeFiles/cmTC_88af8.dir/CheckSymbolExists.c.o  -o cmTC_88af8  
 
-=== BUILD TARGET cmTC_3d118 OF PROJECT CMAKE_TRY_COMPILE WITH CONFIGURATION Debug ===
-
-Check dependencies
-
-Write auxiliary files
-/bin/mkdir -p /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64
-write-file /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/cmTC_3d118.LinkFileList
-
-CompileC /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/CheckSymbolExists.o CheckSymbolExists.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -DCMAKE_INTDIR=\"Debug\" -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.13 -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-semicolon-before-method-body -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/include -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/DerivedSources/x86_64 -I/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -MMD -MT dependencies -MF /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/CheckSymbolExists.d --serialize-diagnostics /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/CheckSymbolExists.dia -c /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/CheckSymbolExists.o
-
-Ld /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_3d118 normal x86_64
-    cd /Users/emmatao/Desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp
-    export MACOSX_DEPLOYMENT_TARGET=10.13
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk -L/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -F/Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug -filelist /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/cmTC_3d118.LinkFileList -mmacosx-version-min=10.13 -Xlinker -object_path_lto -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/cmTC_3d118_lto.o -Xlinker -no_deduplicate -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Xlinker -dependency_info -Xlinker /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug/cmTC_3d118.build/Objects-normal/x86_64/cmTC_3d118_dependency_info.dat -o /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/Debug/cmTC_3d118
-
-** BUILD SUCCEEDED **
-
-
-File /Users/emmatao/desktop/cg/p3-1-pathtracer-EmmmaTao/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /Users/xuyun/desktop/cs184_final/volumetric/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
