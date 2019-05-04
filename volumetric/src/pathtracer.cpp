@@ -23,6 +23,10 @@ using namespace CGL::StaticScene;
 using std::min;
 using std::max;
 
+//Coefficients used for volumetric rendering
+double EXTINCTION = 0.2;
+double SCATTERING = 0.4;
+
 namespace CGL {
 
 PathTracer::PathTracer(size_t ns_aa,
@@ -618,15 +622,13 @@ Spectrum PathTracer::estimate_direct_lighting_importance(const Ray& r, const Int
             lightAvg /= (1.0 * ns_area_light);
             L_out += lightAvg;
         }
-        
     }
-
   return L_out;
 
 
 }
     
-Spectrum PathTracer::estimate_paticle_lighting_importance(const Ray& r, const double t) {
+Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const double t) {
         // Estimate the lighting from this intersection coming directly from a light.
         // To implement importance sampling, sample only from lights, not uniformly in a hemisphere.
         
@@ -641,12 +643,10 @@ Spectrum PathTracer::estimate_paticle_lighting_importance(const Ray& r, const do
         const Vector3D& hit_p = r.o + r.d * t;
         const Vector3D& w_out = w2o * (-r.d);
         Spectrum L_out;
-        
         // TODO (Part 3.2):
         // Here is where your code for looping over scene lights goes
         // COMMENT OUT `normal_shading` IN `est_radiance_global_illumination` BEFORE YOU BEGIN
         for (SceneLight* l : scene->lights) {
-            
             if (l->is_delta_light()) {
                 Vector3D wi = Vector3D();
                 float distoToLight = 0.0;
@@ -658,19 +658,13 @@ Spectrum PathTracer::estimate_paticle_lighting_importance(const Ray& r, const do
                     continue;
                 }
                 else {
-                    
                     const Ray testr = Ray(EPS_D * wi + hit_p, wi);
                     testr.max_t = distoToLight;
                     Intersection testi2 = Intersection();
                     if (!bvh->intersect(testr, &testi2)) {
-                        
                         //if we want to have colored fog, we can do the following
-                        //Spectrum irradiance = radiance * (0.25 / PI) *Spectrum(10, 0.5, 0.5) * scatter / extinction / pdf;
-                        double scatter = 0.3;
-                        double extinction = 0.4;
-                        
-                        Spectrum irradiance = radiance * (0.25 / PI) * scatter /extinction /pdf;
-                    
+                        Spectrum irradiance = radiance * (0.25 / PI) * Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                        //Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
                         L_out += irradiance;
                     }
                 }
@@ -678,7 +672,6 @@ Spectrum PathTracer::estimate_paticle_lighting_importance(const Ray& r, const do
             else {
                 Spectrum lightAvg = Spectrum();
                 for (int i = 0; i< ns_area_light; i++) {
-                    
                     Vector3D wi = Vector3D();
                     float distoToLight = 0.0;
                     float pdf = 0.0;
@@ -689,34 +682,24 @@ Spectrum PathTracer::estimate_paticle_lighting_importance(const Ray& r, const do
                         continue;
                     }
                     else {
-                        
                         const Ray testr = Ray(EPS_D * wi + hit_p, wi);
                         testr.max_t = distoToLight;
                         Intersection testi2 = Intersection();
                         if (!bvh->intersect(testr, &testi2)) {
-                            
-                            
-                            
-                            double scatter = 0.3;
-                            double extinction = 0.4;
                             //if we want to have colored fog, we can do the following
-                            Spectrum irradiance = radiance * (0.25 / PI) *Spectrum(10, 0.5, 0.5) * scatter / extinction / pdf;
+                            Spectrum irradiance = radiance * (0.25 / PI) *Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
                             //no fog coloring
-                            //Spectrum irradiance = radiance * (0.25 / PI) * scatter /extinction /pdf;
-                            
+                            //TODO: rewrite phase function to another function
+                            //Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
                             lightAvg += irradiance;
                         }
                     }
-                    
                 }
                 lightAvg /= (1.0 * ns_area_light);
                 L_out += lightAvg;
             }
-            
         }
         return L_out;
-        
-        
     }
 
 Spectrum PathTracer::zero_bounce_radiance(const Ray&r, const Intersection& isect) {
@@ -724,9 +707,6 @@ Spectrum PathTracer::zero_bounce_radiance(const Ray&r, const Intersection& isect
   // TODO (Part 4.2):
   // Returns the light that results from no bounces of light
     return isect.bsdf->get_emission();
-
-
-
 }
 
 Spectrum PathTracer::one_bounce_radiance(const Ray&r, const Intersection& isect) {
@@ -736,9 +716,15 @@ Spectrum PathTracer::one_bounce_radiance(const Ray&r, const Intersection& isect)
   // depending on `direct_hemisphere_sample`
   // (you implemented these functions in Part 3)
     return estimate_direct_lighting_importance(r, isect);
+}
 
+Spectrum PathTracer::one_bounce_radiance_media(const Ray&r, const double t) {
 
-  
+  // TODO (Part 4.2):
+  // Returns either the direct illumination by hemisphere or importance sampling
+  // depending on `direct_hemisphere_sample`
+  // (you implemented these functions in Part 3)
+  return estimate_particle_lighting_importance(r, t);
 }
 
 Spectrum PathTracer::at_least_one_bounce_radiance(const Ray&r, const Intersection& isect) {
@@ -748,67 +734,146 @@ Spectrum PathTracer::at_least_one_bounce_radiance(const Ray&r, const Intersectio
 
   Vector3D hit_p = r.o + r.d * isect.t;
   Vector3D w_out = w2o * (-r.d);
+  Spectrum L_out;
 
-    Spectrum L_out = one_bounce_radiance(r, isect);
+  L_out = one_bounce_radiance(r, isect);
 
-  // TODO (Part 4.2): 
+  if (r.depth == 1) {
+    return L_out;
+  }
+
+  // TODO (Part 4.2):
   // Here is where your code for sampling the BSDF,
-  // performing Russian roulette step, and returning a recursively 
+  // performing Russian roulette step, and returning a recursively
   // traced ray (when applicable) goes
+  Vector3D w_in = Vector3D(); //object coordinate
+  float pdf;
+  Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+
+  while (pdf == 0.0) {
+    Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+  }
+
+  float cpdf = 0.6; //continue probability
+
+  if (max_ray_depth > 1 && r.depth == max_ray_depth) {//always trace at least one indirect bounce regardless of the Russian roulette
+    Ray test_ray = Ray(hit_p + EPS_D * o2w * w_in, o2w * w_in);
+    test_ray.depth = r.depth - 1;
+    Intersection test_isect;
+    if (bvh->intersect(test_ray, &test_isect)) {
+      L_out += (at_least_one_bounce_radiance(test_ray, test_isect) * bsdf * cos_theta(w_in) / pdf) / cpdf;
+    }
+  } else if (coin_flip(cpdf)) {
     if (r.depth > 1) {
-        if (r.depth == max_ray_depth) {
-            Vector3D w_in = Vector3D();
-            float pdf = 0.0;
-            Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
-            Ray r1 = Ray(EPS_D * o2w * w_in + hit_p, o2w * w_in);
-            r1.depth = r.depth - 1;
-            Intersection testi = Intersection();
-            if (bvh->intersect(r1, &testi)) {
-                Spectrum rad_from_bounce = at_least_one_bounce_radiance(r1, testi) * bsdf * w_in.z / pdf / 0.6;
-                L_out += rad_from_bounce;
-            }
-            else {
-                return L_out;
-            }
-        }
-        else if (coin_flip(0.6)) {
-            Vector3D w_in = Vector3D();
-            float pdf = 0.0;
-            Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
-            Ray r1 = Ray(EPS_D * o2w * w_in + hit_p, o2w * w_in);
-            r1.depth = r.depth - 1;
-            Intersection testi = Intersection();
-            if (bvh->intersect(r1, &testi)) {
-                Spectrum rad_from_bounce = at_least_one_bounce_radiance(r1, testi) * bsdf * w_in.z / pdf / 0.6;
-                L_out += rad_from_bounce;
-            }
-            else {
-                return L_out;
-            }
-        }
-        else {
-            return L_out;
-        }
-        
+      Ray test_ray = Ray(hit_p + EPS_D * o2w * w_in, o2w * w_in);
+      test_ray.depth = r.depth - 1;
+      Intersection test_isect;
+      if (bvh->intersect(test_ray, &test_isect)) {
+        L_out += (at_least_one_bounce_radiance(test_ray, test_isect) * bsdf * cos_theta(w_in) / pdf) / cpdf;
+      }
     }
-    
-    else {
-        return L_out;
-    }
-    
-
+  }
   return L_out;
-  
+}
 
+Spectrum PathTracer::at_least_one_bounce_radiance_media(const Ray &r, const Intersection &isect) {
+  //Determine whether interacting with media or normal path tracing.
+  Matrix3x3 o2w;
+  make_coord_space(o2w, isect.n);
+  Matrix3x3 w2o = o2w.T();
+
+  Vector3D hit_p = r.o + r.d * isect.t;
+  Vector3D w_out = w2o * (-r.d);
+  Spectrum L_out;
+
+  UniformGridSampler2D sampler = UniformGridSampler2D();
+  double number = sampler.get_sample()[1];
+  double s = -log(1-number) / EXTINCTION;
+  double d = ((isect.t * r.d) - r.o).norm();
+
+  bool media = s < d;
+
+  if (s < d) {
+    L_out = one_bounce_radiance_media(r, s);
+    hit_p = r.o + r.d * s;
+  } else {
+    L_out = one_bounce_radiance(r, isect);
+  }
+
+  if (r.depth == 1) {
+    return L_out;
+  }
+
+
+  //TODO: get the correct pdf when you interacting with the media. Probability the pdf is the phase function.
+  //TODO: change win to be uniform sampling from a sphere, right now it's a uniform sampling over hemisphere.
+  Vector3D w_in = Vector3D(); //object coordinate
+  float pdf;
+  Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+
+  while (pdf == 0.0) {
+    Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+  }
+
+  float cpdf = 0.6; //continue probability
+
+  //TODO: modify so that it fits participating media.
+  Spectrum L_next = Spectrum();
+  if (max_ray_depth > 1 && r.depth == max_ray_depth) {//always trace at least one indirect bounce regardless of the Russian roulette
+    Ray test_ray = Ray(hit_p + EPS_D * o2w * w_in, o2w * w_in);
+    test_ray.depth = r.depth - 1;
+    Intersection test_isect;
+    if (bvh->intersect(test_ray, &test_isect)) {
+      L_next = at_least_one_bounce_radiance_media(test_ray, test_isect);
+    }
+  } else if (coin_flip(cpdf)) {
+    if (r.depth > 1) {
+      Ray test_ray = Ray(hit_p + EPS_D * o2w * w_in, o2w * w_in);
+      test_ray.depth = r.depth - 1;
+      Intersection test_isect;
+      if (bvh->intersect(test_ray, &test_isect)) {
+        L_next = at_least_one_bounce_radiance_media(test_ray, test_isect);
+      }
+    }
+  }
+
+  if (!media) {
+    L_next = (L_next * bsdf * cos_theta(w_in) / pdf) /cpdf;
+  } else{
+    //L_next = (L_next *  (SCATTERING / EXTINCTION) * (0.25 / PI) / pdf) / cpdf;
+    L_next = (L_next  * (SCATTERING / EXTINCTION) * Spectrum(0.5, 1, 0.5) * (0.25 / PI) / pdf) / cpdf;
+  }
+
+  return L_out + L_next;
+}
+
+Spectrum PathTracer::est_radiance_global_illumination_media(const Ray &r) {
+  Intersection isect;
+  Spectrum L_out;
+
+  // If no intersection occurs, we simply return black.
+  // This changes if you implement hemispherical lighting for extra credit.
+
+  if (!bvh->intersect(r, &isect))
+    return L_out;
+
+  if (max_ray_depth == 0) {
+    return zero_bounce_radiance(r, isect);
+  }
+  else {
+    //to get the image with only the fog, comment this out
+    L_out = zero_bounce_radiance(r, isect) + at_least_one_bounce_radiance_media(r, isect);
+  //TODO: change min(d,s) to s according to the paper.
+  //TODO: do we divided by the pdf only when we intersecting with the media?
+  //L_out *= EXTINCTION * exp(-EXTINCTION * s); //multiplies by pdf
+  //L_out /= number;
+  return L_out;
+  }
 }
 
 Spectrum PathTracer::est_radiance_global_illumination(const Ray &r) {
   Intersection isect;
   Spectrum L_out;
-
-  // You will extend this in assignment 3-2. 
-  // If no intersection occurs, we simply return black.
-  // This changes if you implement hemispherical lighting for extra credit.
 
   if (!bvh->intersect(r, &isect)) 
     return L_out;
@@ -820,7 +885,7 @@ Spectrum PathTracer::est_radiance_global_illumination(const Ray &r) {
   //return normal_shading(isect.n);
 
   // TODO (Part 3): Return the direct illumination.
-    //return estimate_direct_lighting_importance(r, isect);
+//  return estimate_direct_lighting_importance(r, isect);
 
   // TODO (Part 4): Accumulate the "direct" and "indirect" 
   // parts of global illumination into L_out rather than just direct
@@ -831,27 +896,9 @@ Spectrum PathTracer::est_radiance_global_illumination(const Ray &r) {
         return zero_bounce_radiance(r, isect);
     }
     else {
-        UniformGridSampler2D sampler = UniformGridSampler2D();
-        double number = sampler.get_sample()[1];
-        double extinction = 0.2; //extinction coefficient
-        double s = -log(1 - number) / extinction;
-        double d = isect.t * r.d.norm();
-        //current problem: depth of fog is not correct?
-        
-       if (s < d) {
-           //zero bounce also needs to be different?
-           
-            L_out = estimate_paticle_lighting_importance(r, s);
-        }
-        else {
-            //to get the image with only the fog, comment this out
-            //L_out = zero_bounce_radiance(r, isect) + at_least_one_bounce_radiance(r, isect);
-        }
-        L_out *= extinction * exp(-extinction * min(d, s)); //multiplies by pdf
-
+      L_out = zero_bounce_radiance(r, isect) + at_least_one_bounce_radiance(r, isect);
     }
-  
-  return L_out;
+    return L_out;
 }
 
 Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
@@ -881,10 +928,10 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
         
         for (int i = 0; i < num_samples; i++) {
             Vector2D loc = origin * 1.0 + gridSampler->get_sample();
-            
+
             Ray ri = camera->generate_ray(loc[0]/sampleBuffer.w, loc[1]/sampleBuffer.h);
             ri.depth = max_ray_depth;
-            Spectrum irradiance = est_radiance_global_illumination(ri);
+            Spectrum irradiance = est_radiance_global_illumination_media(ri);
             
             //std::cout<<"avg: " << s1 / (float) i <<endl;
             if (i != 0 and i % samplesPerBatch == 0 and 1.96 * sqrt((1.0f / (i-1)) * (s2 - pow(s1, 2)/(float)i)) / sqrt(i) <= maxTolerance * s1 / (float) i) {
@@ -895,15 +942,13 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
                 //break;
             }
             else {
-                avg += irradiance;
-                s1 += irradiance.illum();
-                s2 += pow(irradiance.illum(),2);
+              avg += irradiance;
+              s1 += irradiance.illum();
+              s2 += pow(irradiance.illum(), 2);
             }
-                
-                
         }
         //instead of averaging, we multiply each sample with its distance s' pdf inside estimate_global_illumination
-        //avg /= num_samples * 1.0;
+        avg /= num_samples * 1.0;
         return avg;
         
     }

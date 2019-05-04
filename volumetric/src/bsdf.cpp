@@ -33,28 +33,23 @@ void make_coord_space(Matrix3x3& o2w, const Vector3D& n) {
 
 Spectrum DiffuseBSDF::f(const Vector3D& wo, const Vector3D& wi) {
 
-  // TODO (Part 3.1): 
+  // TODO (Part 3.1):
   // This function takes in both wo and wi and returns the evaluation of
   // the BSDF for those two directions.
-
-
   return reflectance/PI;
-
-
 }
 
 Spectrum DiffuseBSDF::sample_f(const Vector3D& wo, Vector3D* wi, float* pdf) {
 
-  // TODO (Part 3.1): 
+  // TODO (Part 3.1):
   // This function takes in only wo and provides pointers for wi and pdf,
   // which should be assigned by this function.
   // After sampling a value for wi, it returns the evaluation of the BSDF
   // at (wo, *wi).
     *wi = sampler.get_sample(pdf);
 
-
     return DiffuseBSDF::f(wo, *wi);
-  
+
 
 }
 
