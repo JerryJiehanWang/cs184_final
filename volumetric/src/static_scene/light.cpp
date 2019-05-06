@@ -60,13 +60,39 @@ Spectrum PointLight::sample_L(const Vector3D& p, Vector3D* wi,
 // Spot Light //
 
 SpotLight::SpotLight(const Spectrum& rad, const Vector3D& pos,
-                     const Vector3D& dir, float angle) {
+                     const Vector3D& dir, float angle) :
+    radiance(rad), position(pos), direction(dir), angle(angle) {
 
 }
 
 Spectrum SpotLight::sample_L(const Vector3D& p, Vector3D* wi,
                              float* distToLight, float* pdf) const {
-  return Spectrum();
+    Vector3D d = position - p;
+    *wi = d.unit();
+    *distToLight = d.norm();
+    
+    float cosTheta = d.unit().y;
+    
+    *pdf = 1.0;
+    //std::cout<< angle << endl;
+    //std::cout<<"direction: " << direction << endl;
+//    std::cout<<"ray direction: " << d << endl;
+    //std::cout<< "angle: " << angle <<endl;
+    
+    //std::cout<<"arccos: " << acos(cosTheta) <<", falloff angle: " << angle << endl;
+    //return cosTheta < cos(0.5236) ? radiance : Spectrum();
+    //return acos(cosTheta) < 0.2 ? radiance : Spectrum();
+    //return radiance * pow(fmax(cosTheta, 0), 10);
+    
+    //0.873 is the spotlight cone's angle in radians
+    if (cosTheta < cos(0.873)) {
+        return Spectrum();
+    }
+    else {
+        //the expoential is simular to the blinn-phong specular highlight
+        return radiance * pow(fmax(0,cosTheta), 50);
+    }
+    
 }
 
 

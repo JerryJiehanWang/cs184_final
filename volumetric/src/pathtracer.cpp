@@ -24,8 +24,8 @@ using std::min;
 using std::max;
 
 //Coefficients used for volumetric rendering
-double EXTINCTION = 0.2;
-double SCATTERING = 0.4;
+double EXTINCTION = 0.5;
+double SCATTERING = 0.8;
 
 namespace CGL {
 
@@ -663,8 +663,8 @@ Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const d
                     Intersection testi2 = Intersection();
                     if (!bvh->intersect(testr, &testi2)) {
                         //if we want to have colored fog, we can do the following
-                        Spectrum irradiance = radiance * (0.25 / PI) * Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
-                        //Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
+                        //Spectrum irradiance = radiance * (0.25 / PI) * Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                        Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
                         L_out += irradiance;
                     }
                 }
@@ -687,10 +687,10 @@ Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const d
                         Intersection testi2 = Intersection();
                         if (!bvh->intersect(testr, &testi2)) {
                             //if we want to have colored fog, we can do the following
-                            Spectrum irradiance = radiance * (0.25 / PI) *Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                            //Spectrum irradiance = radiance * (0.25 / PI) *Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
                             //no fog coloring
                             //TODO: rewrite phase function to another function
-                            //Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
+                            Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
                             lightAvg += irradiance;
                         }
                     }
@@ -840,8 +840,8 @@ Spectrum PathTracer::at_least_one_bounce_radiance_media(const Ray &r, const Inte
   if (!media) {
     L_next = (L_next * bsdf * cos_theta(w_in) / pdf) /cpdf;
   } else{
-    //L_next = (L_next *  (SCATTERING / EXTINCTION) * (0.25 / PI) / pdf) / cpdf;
-    L_next = (L_next  * (SCATTERING / EXTINCTION) * Spectrum(0.5, 1, 0.5) * (0.25 / PI) / pdf) / cpdf;
+    L_next = (L_next *  (SCATTERING / EXTINCTION) * (0.25 / PI) / pdf) / cpdf;
+    //L_next = (L_next  * (SCATTERING / EXTINCTION) * Spectrum(0.5, 1, 0.5) * (0.25 / PI) / pdf) / cpdf;
   }
 
   return L_out + L_next;

@@ -685,6 +685,11 @@ void ColladaParser::parse_polymesh(XMLElement* xml, PolymeshInfo& polymesh) {
 
   // polylist
   XMLElement* e_polylist = e_mesh->FirstChildElement("polylist");
+    bool is_triangles = false;
+    if ( !e_polylist ) {
+        e_polylist = e_mesh->FirstChildElement( "triangles" );
+        is_triangles = true;
+    }
   if (e_polylist) {
 
     // input arrays & array offsets
@@ -764,22 +769,39 @@ void ColladaParser::parse_polymesh(XMLElement* xml, PolymeshInfo& polymesh) {
 
     // create polygon size array and compute size of index array
     vector<size_t> sizes; size_t num_indices = 0;
-    XMLElement* e_vcount = e_polylist->FirstChildElement("vcount");
-    if (e_vcount) {
+//    XMLElement* e_vcount = e_polylist->FirstChildElement("vcount");
+//    if (e_vcount) {
+//
+//      size_t size;
+//      string s = e_vcount->GetText();
+//      stringstream ss (s);
+      if ( !is_triangles ) {
+          XMLElement *e_vcount = e_polylist->FirstChildElement("vcount");
+          if ( e_vcount ) {
+              size_t size;
+              string s = e_vcount->GetText();
+              stringstream ss(s);
+              for (size_t i = 0; i < num_polygons; ++i) {
+                  ss >> size;
+                  sizes.push_back(size);
+                  num_indices += size * stride;
+              }
+              
+//      for (size_t i = 0; i < num_polygons; ++i) {
+//        ss >> size;
+//        sizes.push_back(size);
+//        num_indices += size * stride;
+//      }
 
-      size_t size;
-      string s = e_vcount->GetText();
-      stringstream ss (s);
-
-      for (size_t i = 0; i < num_polygons; ++i) {
-        ss >> size;
-        sizes.push_back(size);
-        num_indices += size * stride;
-      }
-
+          } else {
+            stat("Error: polygon sizes undefined in geometry: " << polymesh.id);
+            exit(-1);
+          }
     } else {
-      stat("Error: polygon sizes undefined in geometry: " << polymesh.id);
-      exit(EXIT_FAILURE);
+        for (size_t i = 0; i < num_polygons; ++i) {
+            sizes.push_back(3);
+            num_indices += 3 * stride;
+        }
     }
 
     // index array
