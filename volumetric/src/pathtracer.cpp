@@ -24,8 +24,8 @@ using std::min;
 using std::max;
 
 //Coefficients used for volumetric rendering
-double EXTINCTION = 0.2;
-double SCATTERING = 0.4;
+double EXTINCTION = 0.5;
+double SCATTERING = 0.5;
 
 namespace CGL {
 
