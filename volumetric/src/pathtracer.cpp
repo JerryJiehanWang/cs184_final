@@ -24,8 +24,11 @@ using std::min;
 using std::max;
 
 //Coefficients used for volumetric rendering
-double EXTINCTION = 0.5;
+double EXTINCTION = 0.1;
 double SCATTERING = 0.5;
+//Instantiate a Henyey-Greenstein phase function coefficient
+// -1 <= G <= 1
+double G = 0.5;
 
 namespace CGL {
 
@@ -584,7 +587,6 @@ Spectrum PathTracer::estimate_direct_lighting_importance(const Ray& r, const Int
                 continue;
             }
             else {
-                
                 const Ray testr = Ray(EPS_D * wi + hit_p, wi);
                 testr.max_t = distoToLight;
                 Intersection testi = Intersection();
@@ -663,8 +665,9 @@ Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const d
                     Intersection testi2 = Intersection();
                     if (!bvh->intersect(testr, &testi2)) {
                         //if we want to have colored fog, we can do the following
-                        Spectrum irradiance = radiance * (0.25 / PI) * Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
-                        //Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
+                        //Spectrum irradiance = radiance * uniform_sphere_phase_function() * Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                        //Spectrum irradiance = radiance * uniform_sphere_phase_function() * (SCATTERING / EXTINCTION) / pdf;
+                        Spectrum irradiance = radiance * (SCATTERING / EXTINCTION) * HG_phase_function(wi) / pdf;
                         L_out += irradiance;
                     }
                 }
@@ -687,10 +690,11 @@ Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const d
                         Intersection testi2 = Intersection();
                         if (!bvh->intersect(testr, &testi2)) {
                             //if we want to have colored fog, we can do the following
-                            Spectrum irradiance = radiance * (0.25 / PI) *Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                            //Spectrum irradiance = radiance * uniform_sphere_phase_function() *Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
                             //no fog coloring
                             //TODO: rewrite phase function to another function
-                            //Spectrum irradiance = radiance * (0.25 / PI) * (SCATTERING / EXTINCTION) / pdf;
+                            //Spectrum irradiance = radiance * uniform_sphere_phase_function() * (SCATTERING / EXTINCTION) / pdf;
+                            Spectrum irradiance = radiance * (SCATTERING / EXTINCTION) * HG_phase_function(wi) / pdf;
                             lightAvg += irradiance;
                         }
                     }
@@ -808,23 +812,28 @@ Spectrum PathTracer::at_least_one_bounce_radiance_media(const Ray &r, const Inte
   //TODO: get the correct pdf when you interacting with the media. Probability the pdf is the phase function.
   //TODO: change win to be uniform sampling from a sphere, right now it's a uniform sampling over hemisphere.
   Vector3D w_in = Vector3D(); //object coordinate
+  Spectrum bsdf = Spectrum();
+
   float pdf;
-  Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
 
-  while (pdf == 0.0) {
-    Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+  if (!media) {
+    bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+    while (pdf == 0.0) {
+      Spectrum bsdf = isect.bsdf->sample_f(w_out, &w_in, &pdf);
+    }
+  } else {
+    media_uniform_sphere_sampler(w_out, &w_in, &pdf);
+    //HG_phase_sampler(w_out, &w_in, &pdf);
   }
-
   float cpdf = 0.6; //continue probability
 
-  //TODO: modify so that it fits participating media.
   Spectrum L_next = Spectrum();
   if (max_ray_depth > 1 && r.depth == max_ray_depth) {//always trace at least one indirect bounce regardless of the Russian roulette
     Ray test_ray = Ray(hit_p + EPS_D * o2w * w_in, o2w * w_in);
     test_ray.depth = r.depth - 1;
     Intersection test_isect;
     if (bvh->intersect(test_ray, &test_isect)) {
-      L_next = at_least_one_bounce_radiance_media(test_ray, test_isect);
+      L_next = at_least_one_bounce_radiance(test_ray, test_isect);
     }
   } else if (coin_flip(cpdf)) {
     if (r.depth > 1) {
@@ -832,16 +841,20 @@ Spectrum PathTracer::at_least_one_bounce_radiance_media(const Ray &r, const Inte
       test_ray.depth = r.depth - 1;
       Intersection test_isect;
       if (bvh->intersect(test_ray, &test_isect)) {
-        L_next = at_least_one_bounce_radiance_media(test_ray, test_isect);
+        L_next = at_least_one_bounce_radiance(test_ray, test_isect);
       }
     }
   }
 
   if (!media) {
     L_next = (L_next * bsdf * cos_theta(w_in) / pdf) /cpdf;
-  } else{
-    //L_next = (L_next *  (SCATTERING / EXTINCTION) * (0.25 / PI) / pdf) / cpdf;
-    L_next = (L_next  * (SCATTERING / EXTINCTION) * Spectrum(0.5, 1, 0.5) * (0.25 / PI) / pdf) / cpdf;
+    if (r.depth == max_ray_depth) {
+      L_next += zero_bounce_radiance(r, isect);
+    }
+  } else {
+    L_next = (L_next *  (SCATTERING / EXTINCTION) * HG_phase_function(w_in) / pdf) / cpdf;
+    //L_next = (L_next *  (SCATTERING / EXTINCTION) * uniform_sphere_phase_function() / pdf) / cpdf;
+    //L_next = (L_next  * (SCATTERING / EXTINCTION) * uniform_sphere_phase_function() * (0.25 / PI) / pdf) / cpdf;
   }
 
   return L_out + L_next;
@@ -862,7 +875,7 @@ Spectrum PathTracer::est_radiance_global_illumination_media(const Ray &r) {
   }
   else {
     //to get the image with only the fog, comment this out
-    L_out = zero_bounce_radiance(r, isect) + at_least_one_bounce_radiance_media(r, isect);
+    L_out = at_least_one_bounce_radiance_media(r, isect);
   //TODO: change min(d,s) to s according to the paper.
   //TODO: do we divided by the pdf only when we intersecting with the media?
   //L_out *= EXTINCTION * exp(-EXTINCTION * s); //multiplies by pdf
@@ -953,6 +966,43 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
         
     }
 }
+
+void PathTracer::media_uniform_sphere_sampler(const Vector3D& wo, Vector3D* wi, float* pdf) {
+  *pdf = 0.25 / PI;
+
+  double u = random_uniform();
+  double v = random_uniform();
+
+  double phi = 2 * PI * u;
+
+  double cosTheta = 1.0 - 2.0 * v;
+  double sinTheta = 2.0 * sqrt(v * (1.0 - v));
+
+  *wi = Vector3D(cos(phi) * sinTheta, sin(phi) * sinTheta, cosTheta);
+}
+
+double PathTracer::uniform_sphere_phase_function() {
+  return 0.25 / PI;
+}
+
+void PathTracer::HG_phase_sampler(const Vector3D& wo, Vector3D* wi, float* pdf) {
+  double u = random_uniform();
+  double v = random_uniform();
+
+  double phi = 2 * PI * u;
+  double theta = ((-1 + 2*v + 2*pow(G, 3) * (-1+v) + pow(G,2) * (-1+2*v) + 2*G*(1-v+pow(v,2)))) /
+                (1 + G * pow((-1+2*v), 2));
+
+  *wi = Vector3D(cos(phi) * sin(theta), sin(phi) * sin(theta), cos(theta));
+
+  //TODO: pdf depends on phi?
+  *pdf = v;
+}
+
+double PathTracer::HG_phase_function(const Vector3D& wi) {
+  return (0.25 / PI) * ((1 - pow(G, 2.0)) / pow((1 + pow(G, 2.0) - 2.0 * G * cos_theta(wi)), 1.5));
+}
+
 
 void PathTracer::raytrace_tile(int tile_x, int tile_y,
                                int tile_w, int tile_h) {

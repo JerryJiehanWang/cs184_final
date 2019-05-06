@@ -189,6 +189,11 @@ class PathTracer {
   Spectrum at_least_one_bounce_radiance(const Ray &r, const StaticScene::Intersection& isect);
   Spectrum at_least_one_bounce_radiance_media(const Ray &r, const StaticScene::Intersection& isect);
 
+  void media_uniform_sphere_sampler(const Vector3D& wo, Vector3D* wi, float* pdf);
+  double uniform_sphere_phase_function();
+  double HG_phase_function(const Vector3D& wi);
+  void HG_phase_sampler(const Vector3D& wo, Vector3D* wi, float* pdf);
+
   Spectrum normal_shading(const Vector3D& n) {
     return Spectrum(n[0],n[1],n[2])*.5 + Spectrum(.5,.5,.5);
   }
