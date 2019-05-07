@@ -875,7 +875,7 @@ Spectrum PathTracer::est_radiance_global_illumination_media(const Ray &r) {
   }
   else {
     //to get the image with only the fog, comment this out
-    L_out = at_least_one_bounce_radiance_media(r, isect);
+    L_out = zero_bounce_radiance(r, isect) + at_least_one_bounce_radiance_media(r, isect);
   //TODO: change min(d,s) to s according to the paper.
   //TODO: do we divided by the pdf only when we intersecting with the media?
   //L_out *= EXTINCTION * exp(-EXTINCTION * s); //multiplies by pdf
