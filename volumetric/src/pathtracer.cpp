@@ -24,11 +24,11 @@ using std::min;
 using std::max;
 
 //Coefficients used for volumetric rendering
-double EXTINCTION = 0.1;
+double EXTINCTION = 0.4;
 double SCATTERING = 0.5;
 //Instantiate a Henyey-Greenstein phase function coefficient
 // -1 <= G <= 1
-double G = 0.5;
+double G = 0.3;
 
 namespace CGL {
 
