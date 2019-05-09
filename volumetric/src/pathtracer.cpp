@@ -24,8 +24,8 @@ using std::min;
 using std::max;
 
 //Coefficients used for volumetric rendering
-double EXTINCTION = 0.1;
-double SCATTERING = 0.5;
+double EXTINCTION = 0.3;
+double SCATTERING = 0.6;
 //Instantiate a Henyey-Greenstein phase function coefficient
 // -1 <= G <= 1
 double G = 0.5;
@@ -875,7 +875,7 @@ Spectrum PathTracer::est_radiance_global_illumination_media(const Ray &r) {
   }
   else {
     //to get the image with only the fog, comment this out
-    L_out = zero_bounce_radiance(r, isect) + at_least_one_bounce_radiance_media(r, isect);
+    L_out = at_least_one_bounce_radiance_media(r, isect);
   //TODO: change min(d,s) to s according to the paper.
   //TODO: do we divided by the pdf only when we intersecting with the media?
   //L_out *= EXTINCTION * exp(-EXTINCTION * s); //multiplies by pdf
@@ -932,7 +932,7 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
     if (num_samples == 1) {
         Ray r = camera->generate_ray((x * 1.0 + 0.5)/sampleBuffer.w, (y * 1.0 + 0.5)/sampleBuffer.h);
         r.depth = max_ray_depth;
-        return est_radiance_global_illumination(r);
+        return est_radiance_global_illumination_media(r);
     }
     else {
         Spectrum avg = Spectrum();
