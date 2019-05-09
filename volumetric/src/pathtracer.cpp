@@ -932,7 +932,7 @@ Spectrum PathTracer::raytrace_pixel(size_t x, size_t y) {
     if (num_samples == 1) {
         Ray r = camera->generate_ray((x * 1.0 + 0.5)/sampleBuffer.w, (y * 1.0 + 0.5)/sampleBuffer.h);
         r.depth = max_ray_depth;
-        return est_radiance_global_illumination(r);
+        return est_radiance_global_illumination_media(r);
     }
     else {
         Spectrum avg = Spectrum();
