@@ -19,7 +19,7 @@
 </style>
 <title>CS 184 Final Project</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 
 <body>
@@ -33,8 +33,18 @@
   with primitives' surface, but also in the air.
 </p>
 
-<h2 align="middle">Tech Approach</h2>
-  <h3>Pictures in this part?</h3>
+<h2 align="middle">Technical Approach</h2>
+<h3>General techniques</h3>
+  <div align="middle">
+    <table style="width=100%"> 
+      <tr>
+        <td>
+          <img src="./imgs/8.png" align="middle" width="800px"/>
+          <figcaption align="middle">Volumetric scattering</figcaption>
+        </td>
+      </tr>
+    </table>
+  </div>
 <p> Based on the skeleton of project, we implement the light interacting with the media by Random Walk. In this part, we
   modify the estimate_global_illumination and at_least_one_bounce function to support our implementions.
   First, before the
@@ -57,7 +67,17 @@ integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta
   times the irradiance with Phase function, scattering coefficient and divided by the extinction coefficient and pdf.
   We also times a filter Spectrum to implement fogs of different color.</p>
 
-  <h3>Pictures in this part?</h3>
+  <h3>Phase function</h3>
+  <div align="middle">
+    <table style="width=100%"> 
+      <tr>
+        <td>
+          <img src="./imgs/7.png" align="middle" width="800px"/>
+          <figcaption align="middle">Henyey-Greenstein phase function</figcaption>
+        </td>
+      </tr>
+    </table>
+  </div>
   <p>Phase function is important in volumetric path tracing. We use phase function to sample the bouncing ray in global illumination.
   Naïvely, the simplest phase function is a uniform sphere sampling, where \(p(\Theta) = \frac{1}{4\pi}\). We also implement the
     Henyey-Greenstein phase function, which is \(p(\Theta) = \frac{1}{4\pi}\frac{1 - G^2}{(1 + G^2 - 2G\cos{\Theta})^{\frac{3}{2}}}\),
@@ -65,24 +85,85 @@ integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta
   higher probability that bouncing ray will towards the opposite direction of camera, and if \(G > 0\), higher probability that bouncing ray
   will towards the camera.</p>
 
+  <h3>Problems we met</h3>
+  <p>During our implementation of estimation of the radiance of particles in a media with direct illumination & importance sampling, we encountered a couple of difficulties. Because we modelled our implementation based on the importance sampling at surface hitpoints in project 3-1, the first problem that we encountered was that we did not remove the lambertian cosine term when estimating irradiance. We forgot that the atmosphere does not use the cosine term to evaluate falloff; instead, we need to multiply by a coefficient (scattering coefficient / extinction coefficient) to account for "fall off" due to out-scattering. Another issue that we encountered was re-writing raytrace_pixel() to weight each sample by its probability distribution based on the exponential decay of ray marching. Originally in proj3, this was not considered because every ray hits the same surface hitpoint with 100% probability. For volumetric rendering, however, we need to bias each sample because different camera rays from the same pixel land on different positions in the scene based on the medium. After realizing this, we modified our code to make sure the overall estimation is unbiased.</p>
+
 
   <h2 align="middle">Results</h2>
-  <p>We expect that the most challenging part of the project is to reduce noise in the rendering and the computational cost. To reduce noise, we may implement the importance sampling method discussed in one of the articles listed below. We will measure the quality of our system mainly be observing visual correctness and noice levels.</p>
+  <h3 align="middle">Rendering of different scenes</h2>
+  <div align="middle">
+    <table style="width=100%"> 
+      <tr>
+        <td>
+          <img src="./imgs/1.png" align="middle" width="400px"/>
+          <figcaption align="middle">CBspheres_lambertian with original path tracer</figcaption>
+        </td>
+        <td>
+          <img src="./imgs/2.png" align="middle" width="400px"/>
+          <figcaption align="middle">CBspheres_lambertian with participation of media</figcaption>
+        </td>
+      </tr>
+      <br>
+      <tr>
+        <td>
+          <img src="./imgs/3.png" align="middle" width="400px"/>
+          <figcaption align="middle">spheres with original path tracer under spot lights</figcaption>
+        </td>
+        <td>
+          <img src="./imgs/4.png" align="middle" width="400px"/>
+          <figcaption align="middle">spheres with participation of media under spot lights</figcaption>
+        </td>
+      </tr>
+      <br>
+      </tr> 
+        <td>
+          <img src="./imgs/5.png" align="middle" width="400px"/>
+          <figcaption align="middle">CBdragon with original path tracer under spot lights</figcaption>
+        </td>
+        <td>
+          <img src="./imgs/6.png" align="middle" width="400px"/>
+          <figcaption align="middle">CBdragon with participation of media under spot lights</figcaption>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p>Above are some scenes rendered. We can see that with participation of media, the whole scene gets blurred and contour of objects is less clear. We can also see two clear light beam in the air with participation of media under spot light.</p>
+  <h3 align="middle">Comparison of different coefficients</h3>
+  <div align="middle">
+    <table style="width=100%">
+      <tr>
+        <td>
+          <img src="./report/4.png" align="middle" width="800px"/>
+          <figcaption align="middle">different extinction coefficient</figcaption>        
+        </td>
+      </tr>
+      <br>
+      <tr> 
+        <td>
+          <img src="./report/5.png" align="middle" width="800px"/>
+          <figcaption align="middle">different scattering coefficient</figcaption>        
+        </td> 
+      </tr> 
+      <br>
+      <tr>
+        <td>
+          <img src="./report/6.png" align="middle" width="800px"/>
+          <figcaption align="middle">different G of HG phase function</figcaption>        
+        </td> 
+      </tr>         
+    </table>
+  </div>
+  <p>As extinction coefficient increasing, the scene is getting darker; as scattering coefficient increasing, the scene is getting brighter; As G changing from positive to negative, the light is scattered from forward to backward.</p>
 
 
 <h2 align="middle">Reference</h2>
-<ul>
-  <li>1. First week, modify the existing daes file or finding new dae files to support volumetric lighting for rendering.
-  Getting familiar with project 3's path tracer's structure.</li>
-  <li>2. Second week, implementing direct point lighting for isotropic absorbance and out-scattering when light travels
-    through the media.
-  </li>
-  <li>3. Third week, implement global illumination, in-scattering and anisotropic scattering.</li>
-  <li>3. Fourth week, experiment with parameters of different media, exploring more advanced volumetric lighting rendering,
-  such as bi-direction path tracer, non-homogeneous scattering.</li>
-</ul>
-
+<a href="http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf">http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf</a>
+<a href="https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf">https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf</a>
 <h2 align="middle">Contributions</h2>
+<p>All team members actively attended meetings to decide the project topic, understand technical approaches in papers, discuss the implementation, and debugging the code.</p>
+<p>Jiayue wrote most of the codes for direct lighting with media, global illumination with media, and spot light sampling. She also created new dae files with Blender for rendering; made videos for milestone and final report; made slides for presentation; wrote part of write-up for milestone and final report; and rendered scenes for final results.</p>
+<p>Jiehan wrote codes for HG phase function. He also made slides for presentation; wrote part of write-up for milestone and final report; and rendered scenes for final results.</p>
+<p>Yun created new dae files with Blender for rendering, wrote part of write-up for milestone and final report, made slides for presentation, and rendered scenes for final results.</p>
 
 </body>
 </html>
