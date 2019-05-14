@@ -24,11 +24,11 @@ using std::min;
 using std::max;
 
 //Coefficients used for volumetric rendering
-double EXTINCTION = 0.4;
+double EXTINCTION = 0.3;
 double SCATTERING = 0.5;
 //Instantiate a Henyey-Greenstein phase function coefficient
 // -1 <= G <= 1
-double G = 0.3;
+double G = -0.3;
 
 namespace CGL {
 
@@ -665,9 +665,9 @@ Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const d
                     Intersection testi2 = Intersection();
                     if (!bvh->intersect(testr, &testi2)) {
                         //if we want to have colored fog, we can do the following
-                        //Spectrum irradiance = radiance * uniform_sphere_phase_function() * Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                        Spectrum irradiance = radiance * uniform_sphere_phase_function() * Spectrum(0.54, 0.2, 1) * (SCATTERING / EXTINCTION) / pdf;
                         //Spectrum irradiance = radiance * uniform_sphere_phase_function() * (SCATTERING / EXTINCTION) / pdf;
-                        Spectrum irradiance = radiance * (SCATTERING / EXTINCTION) * HG_phase_function(wi) / pdf;
+                        //Spectrum irradiance = radiance * (SCATTERING / EXTINCTION) * HG_phase_function(wi) / pdf;
                         L_out += irradiance;
                     }
                 }
@@ -690,11 +690,11 @@ Spectrum PathTracer::estimate_particle_lighting_importance(const Ray& r, const d
                         Intersection testi2 = Intersection();
                         if (!bvh->intersect(testr, &testi2)) {
                             //if we want to have colored fog, we can do the following
-                            //Spectrum irradiance = radiance * uniform_sphere_phase_function() *Spectrum(0.5, 1, 0.5) * (SCATTERING / EXTINCTION) / pdf;
+                            Spectrum irradiance = radiance * uniform_sphere_phase_function() *Spectrum(0.54, 0.2, 1) * (SCATTERING / EXTINCTION) / pdf;
                             //no fog coloring
                             //TODO: rewrite phase function to another function
                             //Spectrum irradiance = radiance * uniform_sphere_phase_function() * (SCATTERING / EXTINCTION) / pdf;
-                            Spectrum irradiance = radiance * (SCATTERING / EXTINCTION) * HG_phase_function(wi) / pdf;
+                            //Spectrum irradiance = radiance * (SCATTERING / EXTINCTION) * HG_phase_function(wi) / pdf;
                             lightAvg += irradiance;
                         }
                     }
@@ -852,9 +852,9 @@ Spectrum PathTracer::at_least_one_bounce_radiance_media(const Ray &r, const Inte
       L_next += zero_bounce_radiance(r, isect);
     }
   } else {
-    L_next = (L_next *  (SCATTERING / EXTINCTION) * HG_phase_function(w_in) / pdf) / cpdf;
-    //L_next = (L_next *  (SCATTERING / EXTINCTION) * uniform_sphere_phase_function() / pdf) / cpdf;
-    //L_next = (L_next  * (SCATTERING / EXTINCTION) * uniform_sphere_phase_function() * (0.25 / PI) / pdf) / cpdf;
+    //L_next = (L_next *  (SCATTERING / EXTINCTION) * HG_phase_function(w_in) / pdf) / cpdf;
+    L_next = (L_next *  (SCATTERING / EXTINCTION) * uniform_sphere_phase_function() / pdf) / cpdf;
+    L_next *= Spectrum(0.54, 0.2, 1);
   }
 
   return L_out + L_next;

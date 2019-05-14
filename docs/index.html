@@ -23,56 +23,54 @@
 </head>
 
 <body>
-  <h1 align="middle">CS 184 Final Project Proposal: Volumetric Scattering Rendering</h1>
+  <h1 align="middle">CS 184 Final Report: Volumetric Scattering Rendering</h1>
 <h2 align="middle">Team Member: Jiehan Wang, Jiayue Tao, Yun Xu</h2>
 
 <h2 align="middle">Abstract</h2>
-<p>Our project will implement Volumetric Path Tracing. Currently, in project 3, we implement a path tracer which only
-support lights falling on explicit surface. However, in the real world, lights don't only interact with explicit surface.
-Our current path tracer assumes that lights travel in vacuum, but in real path tracer scene, light actually travels through
-  certain media, such as air. Lights will interact with many particles in the media, resulting in some kind of scattering
-  effect. Volumetric rendering enables us to simulate some real world effects when lights interact with media, such as fog,
-smoke and cloud, and it is important when we try to reach fidelity while doing path tracing. It is more challenging
-than the normal path tracer, because unlike explicit, media are implicit to interact with, and scattering involves many
-different lights behavior.</p>
-<h2>General Approach </h2>
-<p>The participating media can be modeled as a collection of particles. Light can be absorbed or scattered when it interacts with these particles. Because the particle can run randomly, we will not treat particles as a whole and consider the "aggregate probabilistic behavior". </p>
-<p>
-  To sample the radiance of a camera ray from a particular pixel, we will trace a random walk through this direction towards the nearest surface hitpoint. If the walk distance is greater than or equal to the distance to surface, we will use the radiance at that hitpoint and scale it with the extinction coeffient that correlates with the inherent property of the atmosphere. If the walk distance is smaller than the the distance to surface, we will estimate the integral of incoming scattered radiance across the entire sphere (Monte Carlo). We then use the radiance samples from the random walks in Monte Carlo estimation.
+<p>Our project implemented Volumetric Path Tracing. Volumetric Path Tracing is a technique that can show the effect of
+  fog when light travels through media in the air.Currently, in project 3, we implement a path tracer which only
+  support lights falling on explicit surface. We extended the path tracer in project 3 so that the light not only interacts
+  with primitives' surface, but also in the air.
 </p>
-  <h2 align="middle">Goals and Deliverable</h2>
+
+<h2 align="middle">Tech Approach</h2>
+  <h3>Pictures in this part?</h3>
+<p> Based on the skeleton of project, we implement the light interacting with the media by Random Walk. In this part, we
+  modify the estimate_global_illumination and at_least_one_bounce function to support our implementions.
+  First, before the
+light first interacts with a surface, we randomly sample a distance, \(s\), using the PDF \(p_{medium} = ke^{-ks}\). Then,
+we compare \(s\) with the distance between camera and the first hit point of the ray \(d\). If \(s < d\), we perform a
+integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta}{k}f(y, \Theta, \Theta')L(y, \Theta')d\omega'\),
+  where \(\delta\) is the scattering coefficient between 0 and 1, describing how much percent of light are being scattered and \(k\)
+  is the extinction coefficient between 0 and 1, describing how much percent of light are fell out during one interacting with the media.
+  Additionally, \(f(y, \Theta, \Theta')\) is the phase function, which is similar to the BSDF in normal path tracing, describing
+  the distribution of the bouncing light. I will talk about phase function later.
+  If \(s \ge d\), we perform a normal path tracing. Notice that for global illumination, this step only affects the first bounce,
+  all other bounces are normal path tracing. In sum, our approach can be concluded by this equation \(L(x, \Theta) = \int_{0}^{\infty}
+  [s < d ? L_s(x-s\Theta, \Theta) : L_o(x - d\Theta, \Theta)]ke^{-ks}ds\). Notice that whether we take the normal path tracing or not,
+  we always times the \(ke^{-ks}\) term, and also because the probability of whether we interact with the media or not are determined
+  by this equation \(ke^{-ks}\), when we do monte carlo integration, these two terms cancel with each other.
+</p>
+  <p>Sampling from the light is similar but different for interacting with the media in the air. Based on the original function
+    estimate_direct_lighting_importance, we modify it so that it support interacting with the media. Instead of the normal
+    importance over light, which times the BSDF of the surface, a cosine term and divided by the pdf, the volumetric version
+  times the irradiance with Phase function, scattering coefficient and divided by the extinction coefficient and pdf.
+  We also times a filter Spectrum to implement fogs of different color.</p>
+
+  <h3>Pictures in this part?</h3>
+  <p>Phase function is important in volumetric path tracing. We use phase function to sample the bouncing ray in global illumination.
+  Naïvely, the simplest phase function is a uniform sphere sampling, where \(p(\Theta) = \frac{1}{4\pi}\). We also implement the
+    Henyey-Greenstein phase function, which is \(p(\Theta) = \frac{1}{4\pi}\frac{1 - G^2}{(1 + G^2 - 2G\cos{\Theta})^{\frac{3}{2}}}\),
+  where \(G\) is a constant between -1 and 1. If \(G = 0\), obviously it's a uniform sphere phase function. If \(G < 0\),
+  higher probability that bouncing ray will towards the opposite direction of camera, and if \(G > 0\), higher probability that bouncing ray
+  will towards the camera.</p>
+
+
+  <h2 align="middle">Results</h2>
   <p>We expect that the most challenging part of the project is to reduce noise in the rendering and the computational cost. To reduce noise, we may implement the importance sampling method discussed in one of the articles listed below. We will measure the quality of our system mainly be observing visual correctness and noice levels.</p>
 
 
-  <h3>Plan to deliver: </h3>
-  <p> We will create some rendered images for volumetric scattering, with many different behaviors of light when it
-  travels through media. For example, absorbance (particles absorbs radiance), out-scattering (particles scatter lights
-  to other directions) and in-scattering (particles receives light from other directions). Also, we will implement
-  both isotropic (particle scatters lights uniformly) and anisotropic scattering.</p>
-<ul>
-  <li>Homogeneous media scene with point light source.</li>
-  <li>Homogeneous media scene with normal light source. (first column of left image)</li>
-  <li>Homogeneous media scene with different media (eg. fog, smoke).</li>
-</ul>
-  
-  <div align="center">
-            <table style="width=100%">
-                <tr>
-                    <td align="middle">
-                    <img src="images/dragon.jpg" width="480px" />
-                    <figcaption align="middle">Foggy room with dragon, rendered with different volumetric scattering implementations</figcaption>
-                </tr>
-            </table>
-        </div>
-  <h3>Hope to deliver: </h3>
-  <ul>
-    <li>Bi-direction path tracing for volumetric scattering. (first column of right image)</li>
-    <li>Importance sampling for path tracing (second colum of left image)</li>
-    <li>Non-homogeneous media.</li>
-    <li>Spectral Ray Tracing for media like water droplets in the air (rainbow!)</li>
-  </ul>
-
-<h2 align="middle">Schedule</h2>
+<h2 align="middle">Reference</h2>
 <ul>
   <li>1. First week, modify the existing daes file or finding new dae files to support volumetric lighting for rendering.
   Getting familiar with project 3's path tracer's structure.</li>
@@ -84,20 +82,7 @@ different lights behavior.</p>
   such as bi-direction path tracer, non-homogeneous scattering.</li>
 </ul>
 
-<h2 align="middle">Resources</h2>
-<ul>
-  <li>
-    <a href="https://cs.dartmouth.edu/wjarosz/publications/georgiev13joint.pdf">Joint Importance Sampling of Low-Order Volumetric Scattering</a>
-    
-  </li>
-
-  <li>
-    <a href="http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf">Rendering Participating Media
-with Bidirectional Path Tracing</a>
-  </li>
-  <li><a href="https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf">Light Transport in Participating Media</a></li>
-
-</ul>
+<h2 align="middle">Contributions</h2>
 
 </body>
 </html>
