@@ -28,9 +28,8 @@
 
 <h2 align="middle">Abstract</h2>
 <p>Our project implemented Volumetric Path Tracing. Volumetric Path Tracing is a technique that can show the effect of
-  fog when light travels through media in the air.Currently, in project 3, we implement a path tracer which only
-  support lights falling on explicit surface. We extended the path tracer in project 3 so that the light not only interacts
-  with primitives' surface, but also in the air.
+  interaction between light and different medias. Currently, in project 3, we implement a path tracer which only
+  support lights falling on explicit surface. We extended the path tracer in project 3 so that the light not only interacts with primitives' surface, but also with the media in the air.
 </p>
 
 <h2 align="middle">Technical Approach</h2>
@@ -87,6 +86,8 @@ integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta
 
   <h3>Problems we met</h3>
   <p>During our implementation of estimation of the radiance of particles in a media with direct illumination & importance sampling, we encountered a couple of difficulties. Because we modelled our implementation based on the importance sampling at surface hitpoints in project 3-1, the first problem that we encountered was that we did not remove the lambertian cosine term when estimating irradiance. We forgot that the atmosphere does not use the cosine term to evaluate falloff; instead, we need to multiply by a coefficient (scattering coefficient / extinction coefficient) to account for "fall off" due to out-scattering. Another issue that we encountered was re-writing raytrace_pixel() to weight each sample by its probability distribution based on the exponential decay of ray marching. Originally in proj3, this was not considered because every ray hits the same surface hitpoint with 100% probability. For volumetric rendering, however, we need to bias each sample because different camera rays from the same pixel land on different positions in the scene based on the medium. After realizing this, we modified our code to make sure the overall estimation is unbiased.</p>
+
+  <p>We also want to see the effect under spot lights, because the interaction of light and media is more obvious with spot lights. However, our original path tracer does not support spotlight. So we implemented a spot light sampler in light.cpp, and used Blender to create dae files with spot lights.</p>
 
 
   <h2 align="middle">Results</h2>
