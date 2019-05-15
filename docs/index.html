@@ -28,40 +28,51 @@
 
 <h2 align="middle">Abstract</h2>
 <p>Our project implemented Volumetric Path Tracing. Volumetric Path Tracing is a technique that can show the effect of
-  interaction between light and different medias. Currently, in project 3, we implement a path tracer which only
+  interaction between light and different medias. Previously, in project 3, we implemented a path tracer which only
   support lights falling on explicit surface. We extended the path tracer in project 3 so that the light not only interacts with primitives' surface, but also with the media in the air.
 </p>
-
+<br>
 <h2 align="middle">Technical Approach</h2>
 <h3>General techniques</h3>
+
   <div align="middle">
     <table style="width=100%"> 
       <tr>
         <td>
-          <img src="./imgs/8.png" align="middle" width="800px"/>
+          <img src="./imgs/11.png" align="middle" width="400px"/>
           <figcaption align="middle">Volumetric scattering</figcaption>
         </td>
+        <td>
+          <img src="./imgs/10.png" align="middle" width="400px"/>
+          <figcaption align="middle">Regular path tracing</figcaption>
+        </td>
       </tr>
-    </table>
-  </div>
+      <br>
+  </table>
+</div>
 <p> Based on the skeleton of project, we implement the light interacting with the media by Random Walk. In this part, we
-  modify the estimate_global_illumination and at_least_one_bounce function to support our implementions.
+  modify the <span style="font-family: Courier">estimate_global_illumination </span> and <span style="font-family: Courier">at_least_one_bounce</span> function to support our implementions.
   First, before the
-light first interacts with a surface, we randomly sample a distance, \(s\), using the PDF \(p_{medium} = ke^{-ks}\). Then,
+light first interacts with a surface, we randomly sample a distance, \(s\), using the PDF </p><div align="middle">\(p_{medium} = ke^{-ks}\). </div>
+<p>Then,
 we compare \(s\) with the distance between camera and the first hit point of the ray \(d\). If \(s < d\), we perform a
-integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta}{k}f(y, \Theta, \Theta')L(y, \Theta')d\omega'\),
-  where \(\delta\) is the scattering coefficient between 0 and 1, describing how much percent of light are being scattered and \(k\)
+integration based on this equation: </p>
+
+ <div align="middle">\(L_s(y, \Theta) = \int_{\Omega}\frac{\delta}{k}f(y, \Theta, \Theta')L(y, \Theta')d\omega'\), </div>
+  <p>where \(\delta\) is the scattering coefficient between 0 and 1, describing how much percent of light are being scattered and \(k\)
   is the extinction coefficient between 0 and 1, describing how much percent of light are fell out during one interacting with the media.
   Additionally, \(f(y, \Theta, \Theta')\) is the phase function, which is similar to the BSDF in normal path tracing, describing
-  the distribution of the bouncing light. I will talk about phase function later.
+  the distribution of the bouncing light. This will be discussed later.
   If \(s \ge d\), we perform a normal path tracing. Notice that for global illumination, this step only affects the first bounce,
-  all other bounces are normal path tracing. In sum, our approach can be concluded by this equation \(L(x, \Theta) = \int_{0}^{\infty}
-  [s < d ? L_s(x-s\Theta, \Theta) : L_o(x - d\Theta, \Theta)]ke^{-ks}ds\). Notice that whether we take the normal path tracing or not,
+  all other bounces are normal path tracing. In sum, our approach can be concluded by this equation </p> 
+  <div align="middle">\(L(x, \Theta) = \int_{0}^{\infty}
+  [s < d ? L_s(x-s\Theta, \Theta) : L_o(x - d\Theta, \Theta)]ke^{-ks}ds\). </div>
+  <p>Notice that whether we take the normal path tracing or not,
   we always times the \(ke^{-ks}\) term, and also because the probability of whether we interact with the media or not are determined
   by this equation \(ke^{-ks}\), when we do monte carlo integration, these two terms cancel with each other.
 </p>
   <p>Sampling from the light is similar but different for interacting with the media in the air. Based on the original function
-    estimate_direct_lighting_importance, we modify it so that it support interacting with the media. Instead of the normal
+    <span style="font-family: Courier">estimate_direct_lighting_importance</span>, we modify it so that it support interacting with the media. Instead of the normal
     importance over light, which times the BSDF of the surface, a cosine term and divided by the pdf, the volumetric version
   times the irradiance with Phase function, scattering coefficient and divided by the extinction coefficient and pdf.
   We also times a filter Spectrum to implement fogs of different color.</p>
@@ -78,16 +89,25 @@ integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta
     </table>
   </div>
   <p>Phase function is important in volumetric path tracing. We use phase function to sample the bouncing ray in global illumination.
-  Naïvely, the simplest phase function is a uniform sphere sampling, where \(p(\Theta) = \frac{1}{4\pi}\). We also implement the
-    Henyey-Greenstein phase function, which is \(p(\Theta) = \frac{1}{4\pi}\frac{1 - G^2}{(1 + G^2 - 2G\cos{\Theta})^{\frac{3}{2}}}\),
-  where \(G\) is a constant between -1 and 1. If \(G = 0\), obviously it's a uniform sphere phase function. If \(G < 0\),
+  Naïvely, the simplest phase function is a uniform sphere sampling, where </p>
+  <div align="middle"> \(p(\Theta) = \frac{1}{4\pi}\).</div> <p>We also implement the
+    Henyey-Greenstein phase function, which is </p>
+   <div align="middle"> \(p(\Theta) = \frac{1}{4\pi}\frac{1 - G^2}{(1 + G^2 - 2G\cos{\Theta})^{\frac{3}{2}}}\),</div>
+  <p>where \(G\) is a constant between -1 and 1. If \(G = 0\), obviously it's a uniform sphere phase function. If \(G < 0\),
   higher probability that bouncing ray will towards the opposite direction of camera, and if \(G > 0\), higher probability that bouncing ray
   will towards the camera.</p>
 
   <h3>Problems we met</h3>
-  <p>During our implementation of estimation of the radiance of particles in a media with direct illumination & importance sampling, we encountered a couple of difficulties. Because we modelled our implementation based on the importance sampling at surface hitpoints in project 3-1, the first problem that we encountered was that we did not remove the lambertian cosine term when estimating irradiance. We forgot that the atmosphere does not use the cosine term to evaluate falloff; instead, we need to multiply by a coefficient (scattering coefficient / extinction coefficient) to account for "fall off" due to out-scattering. Another issue that we encountered was re-writing raytrace_pixel() to weight each sample by its probability distribution based on the exponential decay of ray marching. Originally in proj3, this was not considered because every ray hits the same surface hitpoint with 100% probability. For volumetric rendering, however, we need to bias each sample because different camera rays from the same pixel land on different positions in the scene based on the medium. After realizing this, we modified our code to make sure the overall estimation is unbiased.</p>
+  <p>During our implementation of estimation of the radiance of particles in a media with direct illumination & importance sampling, we encountered a couple of difficulties. Because we modelled our implementation based on the importance sampling at surface hitpoints in project 3-1, the first problem that we encountered was removing the lambertian cosine term when estimating irradiance. We forgot that the atmosphere does not use the cosine term to evaluate falloff; instead, we need to multiply by a coefficient (scattering coefficient / extinction coefficient) to account for "fall off" due to out-scattering. Another issue that we encountered was re-writing raytrace_pixel() to weight each sample by its probability distribution based on the exponential decay of ray marching. Originally in proj3, this was not considered because every ray hits the same surface hitpoint with 100% probability. For volumetric rendering, however, we need to bias each sample because different camera rays from the same pixel land on different positions in the scene based on the medium. After realizing this, we modified our code to make sure the overall estimation is unbiased.</p>
 
-  <p>We also want to see the effect under spot lights, because the interaction of light and media is more obvious with spot lights. However, our original path tracer does not support spotlight. So we implemented a spot light sampler in light.cpp, and used Blender to create dae files with spot lights.</p>
+  <p>
+  	When implementing global illumination of particles, we encountered similar inaccuracies resulting from using the wrong scaling factor for our Monte Carlo estimator. We also had to fix our random walk sampling to ensure its probability distribution is physically accurate. We realized that a phase function sampler is also needed for both isotropic and non-isotropic phase functions.
+  </p>
+
+  <p>When implementing the <span style="font-family: Courier">sample_L</span> function and constructor for the spot light, we had to closely examine the original code framework to understand the parameters passed in and make use of them correctly. We spent considerable time on debugging the calculation of angles within <span style="font-family: Courier">sample_L</span> to ensure the spotlight illuminates a cone-shaped area. Also, in order to view the mesh structure of the dae files we created in the pathtracer, we added a patch to <span style="font-family: Courier">collada.cpp</span> </p>
+
+  
+
 
 
   <h2 align="middle">Results</h2>
@@ -128,8 +148,10 @@ integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta
       </tr>
     </table>
   </div>
-  <p>Above are some scenes rendered. We can see that with participation of media, the whole scene gets blurred and contour of objects is less clear. We can also see two clear light beam in the air with participation of media under spot light.</p>
-  <h3 align="middle">Comparison of different coefficients</h3>
+  <p>Above are some scenes rendered. We can see that with participation of media, the whole scene gets blurred and the contour of objects is less clear. We can also see two clear light beams in the air with participation of media under spot light.</p>
+  <br>
+
+  <h3 align="middle">Comparison of Different Media Parameters</h3>
   <div align="middle">
     <table style="width=100%">
       <tr>
@@ -154,12 +176,46 @@ integration based on this equation: \(L_s(y, \Theta) = \int_{\Omega}\frac{\delta
       </tr>         
     </table>
   </div>
-  <p>As extinction coefficient increasing, the scene is getting darker; as scattering coefficient increasing, the scene is getting brighter; As G changing from positive to negative, the light is scattered from forward to backward.</p>
+  <p>As extinction coefficient increases, the scene becomes darker due to increasing thickness of the fog. As scattering coefficient increases, the scene gets brighter because the media out-scatters light more frequently. As the Henyey-Greenstein parameter G changes from positive to negative, the light is scattered from forward to backward.</p>
+
+<h2 align="middle">Video</h2>
+<p>
+	Here is a link to our final 
+	<a href="https://drive.google.com/file/d/1kXVt5nxoeJz8X1J-NMtkeCXn30CiU7HS/view?usp=sharing">video</a>.
+</p>
+
+<br>
+
+<h2 align="middle">What we Learned & Looking Ahead</h2>
+<ul>
+  <li>Producing physically accuracte fog is much harder than producing accidentally "foggy" scenes.</li>
+  <li>How to use Blender to create scenes</li>
+  <li>Transferring methods in research papers to actual implementation
+		</li>
+		<li> Interpreting renders to diagnose code issues</li>
+		<li>Patience…</li>
+</ul>
+
+<p>
+	For further implementation, we can
+</p>
+<ul>
+  <li>Enable non-homogenous media with density fields</li>
+  <li>Further reduce noise</li>
+  <li>Try more phase functions to simulate different types of media (cloud, water, smoke...)
+		</li>
+	<li> Improve rendering speed with other sampling methods</li>
+</ul>
+
 
 
 <h2 align="middle">Reference</h2>
-<a href="http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf">http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf</a>
-<a href="https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf">https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf</a>
+Eric P. Lafortune and Yves D. Willems, 
+<a href="http://luthuli.cs.uiuc.edu/~daf/courses/rendering/papers/lafortune96rendering.pdf">Rendering Participating Media with Bidirectional Path Tracing</a>
+<br>
+Wojciech Jarosz, 
+<a href="https://cs.dartmouth.edu/~wjarosz/publications/dissertation/chapter4.pdf">Efficient Monte Carlo Methods for Light Transport in Scattering Media, Chapter 4.</a>
+<br>
 <h2 align="middle">Contributions</h2>
 <p>All team members actively attended meetings to decide the project topic, understand technical approaches in papers, discuss the implementation, and debugging the code.</p>
 <p>Jiayue wrote most of the codes for importance direct lighting with media, and spot light sampling. She also created new dae files with Blender for rendering; made videos for milestone and final report; made slides for presentation; wrote part of write-up for milestone and final report; and rendered scenes for final results.</p>
